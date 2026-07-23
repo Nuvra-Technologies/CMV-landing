@@ -1,0 +1,17 @@
+:root {
+  --background: #ffffff;
+  --foreground: #111827;
+
+  --primary: #2563eb;
+  --primary-foreground: #ffffff;
+
+  --secondary: #f3f4f6;
+  --secondary-foreground: #111827;
+
+  --muted: #6b7280;
+  --border: #e5e7eb;
+
+  --container-max-width: 75rem;
+  --header-height: 4.5rem;
+  --border-radius: 0.75rem;
+}
