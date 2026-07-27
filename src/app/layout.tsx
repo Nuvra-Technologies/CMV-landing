@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
+import { 
+  Footer,
+  Header, 
+  SiteLayout, 
+} from "@/components/layout";
+
 import "./globals.css";
 
 const inter = Inter({
@@ -14,7 +20,7 @@ export const metadata: Metadata = {
     default: "CMV",
     template: "%s | CMV",
   },
-  description: "Clinica General.",
+  description: "Centro médico CMV.",
 };
 
 type RootLayoutProps = Readonly<{
@@ -24,7 +30,14 @@ type RootLayoutProps = Readonly<{
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="es">
-      <body className={`${inter.variable} antialiased`}>{children}</body>
+      <body className={`${inter.variable} antialiased`}>
+        <SiteLayout
+          header={<Header />}
+          footer={<Footer />}
+        >
+          {children}
+        </SiteLayout>
+      </body>
     </html>
   );
 }
