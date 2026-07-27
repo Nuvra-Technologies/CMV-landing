@@ -6,11 +6,18 @@
   --color-foreground: var(--foreground);
 
   --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
   --color-primary-foreground: var(--primary-foreground);
+  --color-primary-soft: var(--primary-soft);
 
   --color-secondary: var(--secondary);
+  --color-secondary-hover: var(--secondary-hover);
   --color-secondary-foreground: var(--secondary-foreground);
 
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+
+  --color-surface: var(--surface);
   --color-muted: var(--muted);
   --color-border: var(--border);
 
@@ -18,14 +25,18 @@
 }
 
 html {
+  min-width: 20rem;
   scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
 }
 
 body {
+  min-height: 100dvh;
   margin: 0;
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-inter), sans-serif;
+  overflow-wrap: break-word;
 }
 
 a {
@@ -38,4 +49,11 @@ input,
 textarea,
 select {
   font: inherit;
+}
+
+img,
+svg,
+video {
+  display: block;
+  max-width: 100%;
 }
