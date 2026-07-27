@@ -5,8 +5,6 @@ export type FAQItem = {
   question: string;
 };
 
-// TODO: reemplazar por las preguntas reales del centro médico.
-// Para agregar una pregunta nueva: sumar un objeto acá.
 export const FAQ_ITEMS: FAQItem[] = [
   {
     id: "como-saco-turno",

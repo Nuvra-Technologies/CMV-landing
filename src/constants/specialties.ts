@@ -17,9 +17,6 @@ export type Specialty = {
   slug: string;
 };
 
-// TODO: reemplazar por la info real del centro médico.
-// Para agregar una especialidad nueva: sumar un objeto acá,
-// eligiendo un icon existente o agregando uno nuevo en medical-icons.tsx
 export const SPECIALTIES: Specialty[] = [
   {
     id: "cardiologia",
