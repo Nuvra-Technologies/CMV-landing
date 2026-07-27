@@ -6,6 +6,8 @@ import {
   Reveal,
   Section,
 } from "@/components/ui";
+import { SpecialtiesPreview } from "@/components/sections/SpecialtiesPreview";
+
 
 export default function Home() {
   return (
@@ -32,23 +34,7 @@ export default function Home() {
         </Container>
       </Section>
 
-      <Section
-        id="especialidades"
-        spacing="lg"
-        className="flex min-h-[70dvh] items-center"
-      >
-        <Container>
-          <Reveal direction="up">
-            <Heading
-              align="center"
-              eyebrow="Atención integral"
-              description="Esta sección será desarrollada posteriormente por el integrante responsable."
-            >
-              Especialidades médicas
-            </Heading>
-          </Reveal>
-        </Container>
-      </Section>
+      <SpecialtiesPreview />
 
       <Section
         id="preguntas-frecuentes"
