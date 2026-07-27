@@ -7,6 +7,7 @@ import {
   Section,
 } from "@/components/ui";
 import { SpecialtiesPreview } from "@/components/sections/SpecialtiesPreview";
+import { FAQPreview } from "@/components/sections/FAQPreview";
 
 
 export default function Home() {
@@ -36,24 +37,7 @@ export default function Home() {
 
       <SpecialtiesPreview />
 
-      <Section
-        id="preguntas-frecuentes"
-        background="secondary"
-        spacing="lg"
-        className="flex min-h-[70dvh] items-center"
-      >
-        <Container>
-          <Reveal direction="up">
-            <Heading
-              align="center"
-              eyebrow="Información útil"
-              description="Aquí se mostrarán respuestas claras a las consultas más habituales de los pacientes."
-            >
-              Preguntas frecuentes
-            </Heading>
-          </Reveal>
-        </Container>
-      </Section>
+      <FAQPreview />
     </>
   );
 }
