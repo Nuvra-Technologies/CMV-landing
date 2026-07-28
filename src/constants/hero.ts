@@ -11,7 +11,7 @@ export const HERO_CONTENT = {
 
   secondaryAction: {
     label: "Ver especialidades",
-    href: "/#especialidades",
+    href: "/especialidades",
   },
 
   image: {

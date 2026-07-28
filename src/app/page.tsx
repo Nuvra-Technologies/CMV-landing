@@ -6,6 +6,9 @@ import {
   Reveal,
   Section,
 } from "@/components/ui";
+import { SpecialtiesPreview } from "@/components/sections/SpecialtiesPreview";
+import { FAQPreview } from "@/components/sections/FAQPreview";
+
 
 export default function Home() {
   return (
@@ -32,42 +35,9 @@ export default function Home() {
         </Container>
       </Section>
 
-      <Section
-        id="especialidades"
-        spacing="lg"
-        className="flex min-h-[70dvh] items-center"
-      >
-        <Container>
-          <Reveal direction="up">
-            <Heading
-              align="center"
-              eyebrow="Atención integral"
-              description="Esta sección será desarrollada posteriormente por el integrante responsable."
-            >
-              Especialidades médicas
-            </Heading>
-          </Reveal>
-        </Container>
-      </Section>
+      <SpecialtiesPreview />
 
-      <Section
-        id="preguntas-frecuentes"
-        background="secondary"
-        spacing="lg"
-        className="flex min-h-[70dvh] items-center"
-      >
-        <Container>
-          <Reveal direction="up">
-            <Heading
-              align="center"
-              eyebrow="Información útil"
-              description="Aquí se mostrarán respuestas claras a las consultas más habituales de los pacientes."
-            >
-              Preguntas frecuentes
-            </Heading>
-          </Reveal>
-        </Container>
-      </Section>
+      <FAQPreview />
     </>
   );
 }

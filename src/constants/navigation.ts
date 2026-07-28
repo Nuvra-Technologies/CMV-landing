@@ -10,7 +10,7 @@ export const MAIN_NAVIGATION: NavigationItem[] = [
   },
   {
     label: "Especialidades",
-    href: "/#especialidades",
+    href: "/especialidades",
   },
   {
     label: "Consultorios",
@@ -22,7 +22,7 @@ export const MAIN_NAVIGATION: NavigationItem[] = [
   },
   {
     label: "Preguntas frecuentes",
-    href: "/#preguntas-frecuentes",
+    href: "/preguntas-frecuentes",
   },
 ];
 
