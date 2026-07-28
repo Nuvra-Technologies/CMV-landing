@@ -22,7 +22,7 @@ export const MAIN_NAVIGATION: NavigationItem[] = [
   },
   {
     label: "Preguntas frecuentes",
-    href: "/#preguntas-frecuentes",
+    href: "/preguntas-frecuentes",
   },
 ];
 
