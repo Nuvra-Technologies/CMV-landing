@@ -8,6 +8,7 @@ import {
 } from "@/components/ui";
 import { SpecialtiesPreview } from "@/components/sections/SpecialtiesPreview";
 import { FAQPreview } from "@/components/sections/FAQPreview";
+import { Staff } from "@/components/sections/Staff";
 
 
 export default function Home() {
@@ -36,6 +37,8 @@ export default function Home() {
       </Section>
 
       <SpecialtiesPreview />
+
+      <Staff />
 
       <FAQPreview />
     </>
