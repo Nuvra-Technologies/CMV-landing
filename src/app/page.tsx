@@ -9,6 +9,7 @@ import {
 import { SpecialtiesPreview } from "@/components/sections/SpecialtiesPreview";
 import { FAQPreview } from "@/components/sections/FAQPreview";
 import { Staff } from "@/components/sections/Staff";
+import { Location } from "@/components/sections/Location";
 
 
 export default function Home() {
@@ -41,6 +42,8 @@ export default function Home() {
       <Staff />
 
       <FAQPreview />
+
+      <Location />
     </>
   );
 }
