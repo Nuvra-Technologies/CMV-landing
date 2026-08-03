@@ -26,4 +26,4 @@ export const MAIN_NAVIGATION: NavigationItem[] = [
   },
 ];
 
-export const APPOINTMENT_URL = "/#turnos";
+export const APPOINTMENT_URL = "https://corazondejesus.ar/autoturno.html";

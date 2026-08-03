@@ -6,9 +6,11 @@ import {
   Reveal,
   Section,
 } from "@/components/ui";
+import Link from "next/link";
 import { SpecialtiesPreview } from "@/components/sections/SpecialtiesPreview";
 import { FAQPreview } from "@/components/sections/FAQPreview";
 import { Location } from "@/components/sections/Location";
+import { InstitutionalPreview } from "@/components/sections/InstitutionalPreview"
 
 
 export default function Home() {
@@ -32,9 +34,20 @@ export default function Home() {
                 href: "#turnos",
               }}
             />
+            <p className="text-muted mt-4 text-center text-sm">
+              ¿No sabés cómo sacar un turno?{" "}
+              <Link
+                href="/como-sacar-turno"
+                className="text-primary hover:text-primary-hover font-semibold"
+              >
+                Mirá el paso a paso
+              </Link>
+            </p>
           </Reveal>
         </Container>
       </Section>
+
+      <InstitutionalPreview />
 
       <SpecialtiesPreview />
 
