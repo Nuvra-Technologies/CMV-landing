@@ -41,20 +41,19 @@ function EyeIcon(props: IconProps) {
   );
 }
 
-function ToothIcon(props: IconProps) {
-  return (
-    <svg {...baseProps} {...props}>
-      <path d="M12 4c-2 0-3 1-4.5 1S5 4 5 4c-2 0-3 2-3 4 0 2 1 3 1 5s1 7 3 7c1.5 0 1.5-4 3-4s1.5 4 3 4c2 0 3-5 3-7s1-3 1-5c0-2-1-4-3-4 0 0-1 1-2.5 1S14 4 12 4Z" />
-    </svg>
-  );
-}
-
 function BrainIcon(props: IconProps) {
   return (
     <svg {...baseProps} {...props}>
-      <path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 3 3" />
-      <path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-3 3" />
-      <path d="M9 4v16M15 4v16" />
+      <path d="M9 5a3 3 0 0 0-3 3v.4A2.8 2.8 0 0 0 4 11a3 3 0 0 0 2 2.8V15a3 3 0 0 0 3 3" />
+      <path d="M15 5a3 3 0 0 1 3 3v.4A2.8 2.8 0 0 1 20 11a3 3 0 0 1-2 2.8V15a3 3 0 0 1-3 3" />
+
+      <path d="M9 5c1.5.5 2 1.6 2 3v8" />
+      <path d="M15 5c-1.5.5-2 1.6-2 3v8" />
+
+      <path d="M8 9h2" />
+      <path d="M14 9h2" />
+      <path d="M8 13h3" />
+      <path d="M13 13h3" />
     </svg>
   );
 }
@@ -88,6 +87,81 @@ function PulseIcon(props: IconProps) {
   );
 }
 
+function LungsIcon(props: IconProps) {
+  return (
+    <svg {...baseProps} {...props}>
+      <path d="M12 3v7" />
+      <path d="M12 10c-1.2-2.2-2.8-4-4.8-4-2.2 0-3.7 2.2-3.7 5 0 4 2.2 7 5.5 7 2.2 0 3-1.8 3-4V10Z" />
+      <path d="M12 10c1.2-2.2 2.8-4 4.8-4 2.2 0 3.7 2.2 3.7 5 0 4-2.2 7-5.5 7-2.2 0-3-1.8-3-4V10Z" />
+    </svg>
+  );
+}
+
+function AppleIcon(props: IconProps) {
+  return (
+    <svg {...baseProps} {...props}>
+      <path d="M12 7c-2-2-6-.5-6 4 0 4 2.5 8 6 8s6-4 6-8c0-4.5-4-6-6-4Z" />
+      <path d="M12 7V4" />
+      <path d="M12 4c1.5 0 2.5.5 3 2" />
+    </svg>
+  );
+}
+
+function GlandIcon(props: IconProps) {
+  return (
+    <svg {...baseProps} {...props}>
+      <circle cx="12" cy="8" r="2" />
+      <circle cx="8" cy="14" r="2" />
+      <circle cx="16" cy="14" r="2" />
+      <path d="M12 10v2" />
+      <path d="M10 13l1-1" />
+      <path d="M14 13l-1-1" />
+    </svg>
+  );
+}
+
+function FootIcon(props: IconProps) {
+  return (
+    <svg {...baseProps} {...props}>
+      <path d="m15 10.42 4.8-5.07" />
+      <path d="M19 18h3" />
+      <path d="M9.5 22 21.414 9.415A2 2 0 0 0 21.2 6.4l-5.61-4.208A1 1 0 0 0 14 3v2a2 2 0 0 1-1.394 1.906L8.677 8.053A1 1 0 0 0 8 9c-.155 6.393-2.082 9-4 9a2 2 0 0 0 0 4h14" />
+    </svg>
+  );
+
+}
+
+function HandIcon(props: IconProps) {
+  return (
+    <svg {...baseProps} {...props}>
+      <path d="M8 11V6" />
+      <path d="M11 10V4" />
+      <path d="M14 10V5" />
+      <path d="M17 12V7" />
+      <path d="M8 11c0 5 2 8 6 8s6-3 6-7v-1" />
+    </svg>
+  );
+}
+
+function SpeechIcon(props: IconProps) {
+  return (
+    <svg {...baseProps} {...props}>
+      <path d="M5 7a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v4a4 4 0 0 1-4 4H11l-4 4v-4H9a4 4 0 0 1-4-4Z" />
+    </svg>
+  );
+}
+
+function VeinsIcon(props: IconProps) {
+  return (
+    <svg {...baseProps} {...props}>
+      <path d="M12 4v16" />
+      <path d="M12 7c-2 1-3 3-3 5" />
+      <path d="M12 10c2 1 3 3 3 5" />
+      <path d="M12 14c-1 .5-2 1.5-2 3" />
+    </svg>
+  );
+}
+
 const SPECIALTY_ICONS: Record<
   SpecialtyIconName,
   (props: IconProps) => React.JSX.Element
@@ -95,11 +169,17 @@ const SPECIALTY_ICONS: Record<
   heart: HeartIcon,
   bone: BoneIcon,
   eye: EyeIcon,
-  tooth: ToothIcon,
   brain: BrainIcon,
   stethoscope: StethoscopeIcon,
   baby: BabyIcon,
   pulse: PulseIcon,
+  lungs: LungsIcon,
+  apple: AppleIcon,
+  gland: GlandIcon,
+  foot: FootIcon,
+  hand: HandIcon,
+  speech: SpeechIcon,
+  veins: VeinsIcon
 };
 
 export function SpecialtyIcon({
