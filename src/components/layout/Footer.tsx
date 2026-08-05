@@ -24,7 +24,7 @@ export function Footer() {
             >
               <span className="inline-flex size-14 items-center justify-center overflow-hidden rounded-2xl bg-white p-1">
                 <Image
-                  src="/images/logo.webp"
+                  src="/images/logo-cmv.png"
                   alt=""
                   width={48}
                   height={48}

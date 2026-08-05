@@ -76,10 +76,8 @@ export default function InstitutionalPage() {
                 “{INSTITUTIONAL.slogan}”
               </p>
 
-              <p className="text-muted mt-4 text-base leading-7 sm:text-lg">
-                {INSTITUTIONAL.intro} Hace {years} años acompañamos a
-                nuestros pacientes y a los profesionales que trabajan con
-                nosotros.
+              <p className="text-muted mt-4 text-base leading-7 sm:text-lg whitespace-pre-line">
+                {INSTITUTIONAL.fullInfo}
               </p>
             </div>
           </Reveal>
@@ -92,7 +90,7 @@ export default function InstitutionalPage() {
             <Heading
               align="center"
               eyebrow="Nuestras instalaciones"
-              description={INSTITUTIONAL.facilities.description}
+              description={INSTITUTIONAL.facilities.title}
               wrapperClassName="mx-auto max-w-2xl"
             >
               Infraestructura y comodidades
