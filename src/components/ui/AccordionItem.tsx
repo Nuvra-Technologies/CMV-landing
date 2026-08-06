@@ -26,8 +26,8 @@ export function AccordionItem({
   return (
     <div
       className={cn(
-        "border-border border-b transition-colors duration-200",
-        isOpen && "bg-primary-soft/40",
+        "border-border border-b transition-all duration-300",
+        isOpen && "border-primary/15",
       )}
     >
       <h3>
@@ -40,9 +40,9 @@ export function AccordionItem({
           onClick={onToggle}
           onKeyDown={onKeyDown}
           className={cn(
-            "flex w-full items-center justify-between gap-4 rounded-sm py-5 text-left",
-            "focus-visible:ring-primary focus-visible:outline-none focus-visible:ring-2",
-            "focus-visible:ring-offset-2",
+            "flex w-full items-center justify-between gap-4 py-6 pl-5 pr-1 text-left cursor-pointer",
+            "transition-colors duration-300",
+            "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40",
           )}
         >
           <span
@@ -57,9 +57,11 @@ export function AccordionItem({
           <span
             aria-hidden="true"
             className={cn(
-              "flex size-8 shrink-0 items-center justify-center rounded-full",
-              "border-border text-muted border transition-all duration-300",
-              isOpen && "border-primary bg-primary text-primary-foreground rotate-45",
+              "flex size-9 items-center justify-center rounded-full",
+              "border border-border bg-background",
+              "text-muted transition-all duration-300",
+              isOpen &&
+                "border-primary text-primary rotate-45"
             )}
           >
             <svg
@@ -84,7 +86,14 @@ export function AccordionItem({
         style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}
       >
         <div className="overflow-hidden">
-          <p className="text-muted pr-10 pb-5 text-sm leading-6 sm:text-base">
+          <p
+            className={cn(
+              "text-muted pr-10 pb-6 text-sm leading-7 transition-all duration-300 sm:text-base",
+              isOpen
+                ? "translate-y-0 opacity-100"
+                : "-translate-y-1 opacity-0"
+            )}
+          >
             {answer}
           </p>
         </div>
