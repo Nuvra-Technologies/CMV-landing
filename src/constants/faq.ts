@@ -14,52 +14,52 @@ export const FAQ_ITEMS: FAQItem[] = [
       "Podés solicitar tu turno online desde la sección de turnos de la página, eligiendo la especialidad que necesites. También podés llamar a recepción si preferís coordinarlo por teléfono.",
   },
   {
-    id: "cancelar-turno",
+    id: "que-obras-sociales-reciben",
     category: "Turnos y consultas",
-    question: "¿Puedo cancelar o reprogramar un turno ya solicitado?",
+    question: "¿Qué obras sociales reciben?",
     answer:
-      "Sí, podés cancelar o reprogramar tu turno desde el mismo sistema de gestión, con al menos 24 horas de anticipación.",
+      "Trabajamos con obras sociales y empresas de medicina prepaga. Si tenés dudas sobre tu cobertura, podés comunicarte con nosotros antes de solicitar el turno.",
   },
   {
-    id: "obras-sociales",
-    category: "Obras sociales y coberturas",
-    question: "¿Con qué obras sociales trabajan?",
+    id: "que-especialidades-ofrecen",
+    category: "Consultas generales",
+    question: "¿Qué especialidades médicas ofrecen?",
     answer:
-      "Trabajamos con las principales obras sociales y prepagas de la provincia. Te recomendamos consultar la cobertura específica de tu plan antes de sacar el turno.",
+      "Contamos con Clínica Médica, Cardiología, Cirugía Vascular, Neumonología, Flebología, Nutrición, Endocrinología, Podología, Psiquiatría, Psicología, Fonoaudiología y Terapia Ocupacional.",
   },
   {
-    id: "particular",
-    category: "Obras sociales y coberturas",
-    question: "¿Atienden pacientes particulares sin obra social?",
-    answer:
-      "Sí, todas nuestras especialidades están disponibles también para consultas particulares.",
-  },
-  {
-    id: "resultados-estudios",
-    category: "Estudios y resultados",
-    question: "¿Cómo puedo retirar los resultados de mis estudios?",
-    answer:
-      "Los resultados se entregan en recepción o, según el estudio, se envían digitalmente al mail registrado en tu turno.",
-  },
-  {
-    id: "preparacion-estudios",
-    category: "Estudios y resultados",
-    question: "¿Necesito algún tipo de preparación previa para un estudio?",
-    answer:
-      "Depende del estudio solicitado. Al confirmar tu turno vas a recibir las indicaciones específicas de preparación, si corresponden.",
-  },
-  {
-    id: "horarios-atencion",
-    category: "Información general",
-    question: "¿Cuál es el horario de atención del centro médico?",
-    answer:
-      "Atendemos de lunes a viernes de 8 a 20hs, y los sábados de 8 a 13hs.",
-  },
-  {
-    id: "urgencias",
-    category: "Información general",
+    id: "atienden-urgencias",
+    category: "Consultas generales",
     question: "¿Atienden urgencias?",
     answer:
-      "No contamos con guardia de urgencias. Para emergencias médicas, recomendamos dirigirse al servicio de guardia hospitalaria más cercano.",
+      "No. CMV brinda atención exclusivamente mediante turnos programados.",
+  },
+  {
+    id: "que-estudios-cardiovasculares-realizan",
+    category: "Consultas generales",
+    question: "¿Qué estudios cardiovasculares realizan?",
+    answer:
+      "Realizamos ecodoppler cardíaco, ecodoppler vascular, electrocardiograma, Holter de ECG, MAPA, exámenes cardiovasculares y estudios orientados a la prevención y seguimiento de enfermedades cardiovasculares.",
+  },
+  {
+    id: "donde-estan-ubicados",
+    category: "Consultas generales",
+    question: "¿Dónde están ubicados?",
+    answer:
+      "Nos encontramos en Lavalle 584, San Miguel de Tucumán, Tucumán. Podés ver nuestra ubicación en el mapa de la sección de contacto.",
+  },
+  {
+    id: "puedo-alquilar-consultorio",
+    category: "Consultorios y alquileres",
+    question: "¿Puedo alquilar un consultorio?",
+    answer:
+      "Sí. Contamos con consultorios completamente equipados disponibles en modalidad mensual y por módulos. Contactanos para conocer disponibilidad.",
+  },
+  {
+    id: "cual-es-el-horario-de-atencion",
+    category: "Consultas generales",
+    question: "¿Cuál es el horario de atención?",
+    answer:
+      "Atendemos de lunes a viernes de 08:30 a 13:00 y de 16:00 a 19:00 con turno previo."
   },
 ];
