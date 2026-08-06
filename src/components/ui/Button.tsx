@@ -31,13 +31,13 @@ export type ButtonProps = ButtonElementProps | AnchorElementProps;
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    "bg-primary text-primary-foreground shadow-sm hover:bg-primary-hover hover:shadow-md",
+    "bg-primary text-primary-foreground shadow-sm hover:bg-primary-hover hover:shadow-md hover:-translate-y-0.5",
   secondary:
-    "bg-secondary text-secondary-foreground hover:bg-secondary-hover",
+    "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary-hover hover:-translate-y-0.5",
   outline:
-    "border border-primary text-primary hover:bg-primary-soft",
+    "border border-primary text-primary hover:bg-primary-soft hover:-translate-y-0.5",
   ghost:
-    "text-foreground hover:bg-surface",
+    "text-foreground hover:bg-surface-hover",
 };
 
 const sizeClasses: Record<ButtonSize, string> = {
