@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 
 import { 
@@ -54,16 +54,82 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
+
+  openGraph: {
+    type: "website",
+    locale: "es_AR",
+    // url: "https://cmv.com",
+    siteName: "CMV",
+
+    title: "CMV | Centro Médico en Tucumán",
+
+    description:
+      "Centro Médico especializado en medicina vascular, cardiología y especialidades médicas.",
+
+    // images: [
+    //   {
+    //     url: "/og-image.jpg",
+    //     width: 1200,
+    //     height: 630,
+    //     alt: "Centro Médico CMV",
+    //   },
+    // ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title: "CMV | Centro Médico",
+
+    description:
+      "Centro Médico especializado en medicina vascular y cardiología.",
+
+    // images: ["/og-image.jpg"],
+  },
+
+  icons: {
+    icon: "/favicon.ico",
+
+    shortcut: "/favicon-16x16.png",
+
+    apple: "/apple-touch-icon.png",
+  },
+
+  manifest: "/site.webmanifest",
+
+  // Cuando esté el Search Console
+  // verification: {
+  //   google: "codigo-google",
+  // },
+
+  alternates: {
+    canonical: "/",
+  },
+
+  applicationName: "CMV Centro Médico",
+
+  referrer: "origin-when-cross-origin",
+
+  formatDetection: {
+    telephone: false,
+    email: false,
+    address: false,
+  },
+
+  appleWebApp: {
+    capable: true,
+    title: "CMV",
+    statusBarStyle: "default",
+  },
+
+
 };
 
-// Falta openGraph
-// Falta twitter card
-// Falta icons
-// Falta manifest
-// Falta verification
-// Falta metadataBase
-// Falta themeColor
-// Falta colorScheme
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#ffffff",
+};
 
 type RootLayoutProps = Readonly<{
   children: React.ReactNode;
@@ -71,7 +137,7 @@ type RootLayoutProps = Readonly<{
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="es">
+    <html lang="es-AR">
       <body className={`${inter.variable} font-sans antialiased`}>
         <SiteLayout
           header={<Header />}
