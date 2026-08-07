@@ -12,7 +12,7 @@ import {
   INSTITUTIONAL,
   getYearsSinceFoundation,
 } from "@/constants/institutional";
-
+import Image from "next/image";
 
 function BuildingIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -202,10 +202,12 @@ export default function InstitutionalPage() {
               delay={100}
               className="border-border relative aspect-[4/3] overflow-hidden rounded-3xl border bg-gradient-to-br from-secondary via-background to-primary-soft shadow-md"
             >
-              {/* TODO: reemplazar por una foto real de un consultorio */}
-              <div className="text-muted absolute inset-0 flex items-center justify-center text-sm">
-                Foto de consultorio (placeholder)
-              </div>
+              <Image
+                src="/images/office-2.jpg"
+                alt="Consultorio del Centro Médico CMV"
+                fill
+                className="object-cover"
+              />
             </Reveal>
           </div>
         </Container>

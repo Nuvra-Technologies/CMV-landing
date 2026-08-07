@@ -15,8 +15,8 @@ export const HERO_CONTENT = {
   },
 
   image: {
-    src: "/images/logo.webp", // aqui hay que poner la foto del hero y cambiar la propiedad en Hero.tsx de sections, linea 120
-    alt: "Logo provisional del Centro Médico CMV",
+    src: "/images/hero-image.jpg", // aqui hay que poner la foto del hero y cambiar la propiedad en Hero.tsx de sections, linea 120
+    alt: "Imagen del Centro Médico CMV visto desde afuera",
   },
 
   indicators: [
