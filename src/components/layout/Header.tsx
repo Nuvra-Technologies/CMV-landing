@@ -90,7 +90,7 @@ export function Header() {
             onClick={closeMenu}
           >
             <Image
-              src="/images/logo.webp"
+              src="/images/logo-cmv.png"
               alt=""
               width={48}
               height={48}

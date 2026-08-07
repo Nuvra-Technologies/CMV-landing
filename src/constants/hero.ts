@@ -1,27 +1,27 @@
 export const HERO_CONTENT = {
   eyebrow: "Centro médico CMV",
-  title: "Tu turno médico, de forma rápida y simple",
+  title: "Medicina Vascular, Cardiología y Especialidades Médicas en Tucumán",
   description:
-    "Accedé al sistema de turnos online y encontrá la atención que necesitás sin llamar a recepción.",
+    "Tu salud es nuestra prioridad. Desde 2011 brindamos atención médica especializada en Tucumán, con un equipo de profesionales comprometidos, estudios cardiovasculares de alta complejidad y un sistema de turnos online pensado para ofrecer una experiencia ágil, cómoda y segura.",
 
   primaryAction: {
-    label: "Sacar turno",
+    label: "Solicitar turno",
     href: "/#turnos",
   },
 
   secondaryAction: {
-    label: "Ver especialidades",
+    label: "Conocer especialidades",
     href: "/especialidades",
   },
 
   image: {
-    src: "/images/logo.webp", // aqui hay que poner la foto del hero y cambiar la propiedad en Hero.tsx de sections, linea 120
-    alt: "Logo provisional del Centro Médico CMV",
+    src: "/images/hero-image.jpg", // aqui hay que poner la foto del hero y cambiar la propiedad en Hero.tsx de sections, linea 120
+    alt: "Imagen del Centro Médico CMV visto desde afuera",
   },
 
   indicators: [
-    "Turnos online",
-    "Atención profesional",
-    "Acceso simple y rápido",
+    "Más de 14 años de trayectoria",
+    "Único Centro de Medicina Vascular en Tucumán",
+    "Atención con obras sociales y prepagas",
   ],
 } as const;

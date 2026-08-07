@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 
 import { 
@@ -16,11 +16,119 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  // metadataBase: new URL("https://cmv.com"), //cambiar por el dominio real
+
   title: {
-    default: "CMV",
+    default: "CMV | Centro Médico en Tucumán",
     template: "%s | CMV",
   },
-  description: "Centro médico CMV.",
+
+  description: "Centro Médico CMV en Tucumán. Especialistas en medicina vascular, cardiología, estudios cardiovasculares y múltiples especialidades médicas.",
+
+  keywords: [
+    "Centro Médico Tucumán",
+    "Cardiología Tucumán",
+    "Medicina vascular",
+    "Cirugía vascular",
+    "Estudios cardiovasculares",
+    "Turnos médicos",
+    "Consultorios médicos",
+  ],
+
+  authors: [{ name: "CMV Centro Médico" }],
+
+  creator: "CMV",
+
+  publisher: "CMV",
+
+  category: "Health",
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+
+  openGraph: {
+    type: "website",
+    locale: "es_AR",
+    // url: "https://cmv.com",
+    siteName: "CMV",
+
+    title: "CMV | Centro Médico en Tucumán",
+
+    description:
+      "Centro Médico especializado en medicina vascular, cardiología y especialidades médicas.",
+
+    // images: [
+    //   {
+    //     url: "/og-image.jpg",
+    //     width: 1200,
+    //     height: 630,
+    //     alt: "Centro Médico CMV",
+    //   },
+    // ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title: "CMV | Centro Médico",
+
+    description:
+      "Centro Médico especializado en medicina vascular y cardiología.",
+
+    // images: ["/og-image.jpg"],
+  },
+
+  icons: {
+    icon: "/favicon.ico",
+
+    shortcut: "/favicon-16x16.png",
+
+    apple: "/apple-touch-icon.png",
+  },
+
+  manifest: "/site.webmanifest",
+
+  // Cuando esté el Search Console
+  // verification: {
+  //   google: "codigo-google",
+  // },
+
+  alternates: {
+    canonical: "/",
+  },
+
+  applicationName: "CMV Centro Médico",
+
+  referrer: "origin-when-cross-origin",
+
+  formatDetection: {
+    telephone: false,
+    email: false,
+    address: false,
+  },
+
+  appleWebApp: {
+    capable: true,
+    title: "CMV",
+    statusBarStyle: "default",
+  },
+
+
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#ffffff",
 };
 
 type RootLayoutProps = Readonly<{
@@ -29,8 +137,8 @@ type RootLayoutProps = Readonly<{
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="es">
-      <body className={`${inter.variable} antialiased`}>
+    <html lang="es-AR">
+      <body className={`${inter.variable} font-sans antialiased`}>
         <SiteLayout
           header={<Header />}
           footer={<Footer />}

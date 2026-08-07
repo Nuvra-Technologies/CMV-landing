@@ -123,7 +123,7 @@ export function Hero() {
                 fill
                 preload
                 sizes="(max-width: 1023px) 100vw, 50vw"
-                className="object-contain p-12 sm:p-20 lg:p-16" //cuando tengamos la foto cambiar esto por className="object-cover" --- otra cosa, la foto debe ser webp o avif y con buena resolucion -> 1600px de ancho y ser vertical no seas qlll
+                className="object-cover object-center transition-transform duration-500 hover:scale-[1.02]" //cuando tengamos la foto cambiar esto por className="object-cover" --- otra cosa, la foto debe ser webp o avif y con buena resolucion -> 1600px de ancho y ser vertical no seas qlll --- dejá de llorar pa
               />
 
               <div className="absolute right-4 bottom-4 left-4 rounded-2xl border border-white/70 bg-white/90 p-4 shadow-sm backdrop-blur-md sm:right-auto sm:max-w-xs">

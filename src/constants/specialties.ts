@@ -2,11 +2,17 @@ export type SpecialtyIconName =
   | "heart"
   | "bone"
   | "eye"
-  | "tooth"
   | "brain"
   | "stethoscope"
   | "baby"
-  | "pulse";
+  | "pulse"
+  | "lungs"
+  | "apple"
+  | "gland"
+  | "foot"
+  | "hand"
+  | "speech"
+  | "veins";
 
 export type Specialty = {
   category: string;
@@ -22,73 +28,109 @@ export const SPECIALTIES: Specialty[] = [
     id: "cardiologia",
     slug: "cardiologia",
     name: "Cardiología",
-    category: "Clínica médica",
+    category: "Cardiovascular",
     description:
-      "Diagnóstico y seguimiento de enfermedades cardiovasculares con equipamiento actualizado.",
+      "Prevención y tratamiento de enfermedades del corazón.",
     icon: "heart",
-  },
-  {
-    id: "pediatria",
-    slug: "pediatria",
-    name: "Pediatría",
-    category: "Clínica médica",
-    description:
-      "Control y cuidado de la salud de bebés, niños y adolescentes en cada etapa.",
-    icon: "baby",
-  },
-  {
-    id: "traumatologia",
-    slug: "traumatologia",
-    name: "Traumatología",
-    category: "Especialidades quirúrgicas",
-    description:
-      "Tratamiento de lesiones óseas, musculares y articulares, con y sin cirugía.",
-    icon: "bone",
-  },
-  {
-    id: "oftalmologia",
-    slug: "oftalmologia",
-    name: "Oftalmología",
-    category: "Diagnóstico y prevención",
-    description:
-      "Evaluación de la salud visual y tratamiento de afecciones oculares.",
-    icon: "eye",
-  },
-  {
-    id: "odontologia",
-    slug: "odontologia",
-    name: "Odontología",
-    category: "Diagnóstico y prevención",
-    description:
-      "Atención odontológica integral, desde controles hasta tratamientos especializados.",
-    icon: "tooth",
-  },
-  {
-    id: "neurologia",
-    slug: "neurologia",
-    name: "Neurología",
-    category: "Especialidades quirúrgicas",
-    description:
-      "Diagnóstico y tratamiento de trastornos del sistema nervioso.",
-    icon: "brain",
   },
   {
     id: "clinica-medica",
     slug: "clinica-medica",
     name: "Clínica médica",
-    category: "Clínica médica",
+    category: "Clínica general",
     description:
-      "Consultas generales, chequeos preventivos y derivación a especialistas.",
+      "Atención general y chequeos generales.",
     icon: "stethoscope",
   },
   {
-    id: "kinesiologia",
-    slug: "kinesiologia",
-    name: "Kinesiología",
-    category: "Diagnóstico y prevención",
+    id: "cirugia-vascular",
+    slug: "cirugia-vascular",
+    name: "Cirugía Vascular",
+    category: "Cardiovascular",
     description:
-      "Rehabilitación física y tratamiento de lesiones para recuperar la movilidad.",
+      "Tratamiento quirúrgicos de arterias y venas.",
     icon: "pulse",
+  },
+  {
+    id: "flebologia",
+    slug: "flebologia",
+    name: "Flebología",
+    category: "Cardiovascular",
+    description:
+      "Diagnóstico y cuidado de la salud venosa.",
+    icon: "veins",
+  },
+  {
+    id: "neumonologia",
+    slug: "neumonologia",
+    name: "Neumonología",
+    category: "Respiratoria",
+    description:
+      "Tratamiento de enfermedades respiratorias y pulmonares.",
+    icon: "lungs",
+  },
+  {
+    id: "nutricion",
+    slug: "nutricion",
+    name: "Nutrición",
+    category: "Clínica general",
+    description:
+      "Planes alimentarios para mejorar tu salud.",
+    icon: "apple",
+  },
+  {
+    id: "endocrinologia",
+    slug: "endocrinologia",
+    name: "Endocrinología",
+    category: "Clínica general",
+    description:
+      "Diagnóstico y control de trastornos hormonales.",
+    icon: "gland",
+  },
+  {
+    id: "podologia",
+    slug: "podologia",
+    name: "Podología",
+    category: "Rehabilitación y Funcionalidad",
+    description:
+      "Cuidado y tratamiento de la salud del pie.",
+    icon: "foot",
+  },
+  {
+    id: "psiquiatria",
+    slug: "psiquiatria",
+    name: "Psiquiatría",
+    category: "Salud mental",
+    description:
+      "Atención médica de trastornos mentales.",
+    icon: "brain",
+  },
+  {
+    id: "psicologia",
+    slug: "psicologia",
+    name: "Psicología",
+    category: "Salud mental",
+    description:
+      "Terapia y acompañamiento emocional.",
+    icon: "brain",
+  },
+  {
+    id: "fonoaudiologia",
+    slug: "fonoaudiologia",
+    name: "Fonoaudiología",
+    category: "Rehabilitación y Funcionalidad",
+    description:
+      "Rehabilitación del habla y la comunicación.",
+    icon: "speech",
+  },
+  {
+    id: "terapia-ocupacional",
+    slug: "terapia-ocupacional",
+    name: "Terapia ocupacional",
+    category: "Rehabilitación y Funcionalidad",
+    description:
+      "Promoción de autonomía y funcionalidad diaria.",
+    icon: "hand",
   },
 ];
 

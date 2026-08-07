@@ -12,7 +12,7 @@ import {
   INSTITUTIONAL,
   getYearsSinceFoundation,
 } from "@/constants/institutional";
-
+import Image from "next/image";
 
 function BuildingIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -76,10 +76,8 @@ export default function InstitutionalPage() {
                 “{INSTITUTIONAL.slogan}”
               </p>
 
-              <p className="text-muted mt-4 text-base leading-7 sm:text-lg">
-                {INSTITUTIONAL.intro} Hace {years} años acompañamos a
-                nuestros pacientes y a los profesionales que trabajan con
-                nosotros.
+              <p className="text-muted mt-4 text-base leading-7 sm:text-lg whitespace-pre-line">
+                {INSTITUTIONAL.fullInfo}
               </p>
             </div>
           </Reveal>
@@ -92,7 +90,7 @@ export default function InstitutionalPage() {
             <Heading
               align="center"
               eyebrow="Nuestras instalaciones"
-              description={INSTITUTIONAL.facilities.description}
+              description={INSTITUTIONAL.facilities.title}
               wrapperClassName="mx-auto max-w-2xl"
             >
               Infraestructura y comodidades
@@ -204,10 +202,12 @@ export default function InstitutionalPage() {
               delay={100}
               className="border-border relative aspect-[4/3] overflow-hidden rounded-3xl border bg-gradient-to-br from-secondary via-background to-primary-soft shadow-md"
             >
-              {/* TODO: reemplazar por una foto real de un consultorio */}
-              <div className="text-muted absolute inset-0 flex items-center justify-center text-sm">
-                Foto de consultorio (placeholder)
-              </div>
+              <Image
+                src="/images/office-2.jpg"
+                alt="Consultorio del Centro Médico CMV"
+                fill
+                className="object-cover"
+              />
             </Reveal>
           </div>
         </Container>

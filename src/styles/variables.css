@@ -2,21 +2,22 @@
   --background: #ffffff;
   --foreground: #172033;
 
-  --primary: #b8324a;
-  --primary-hover: #9f293f;
+  --primary: #b13b55;
+  --primary-hover: #982f47;
   --primary-foreground: #ffffff;
-  --primary-soft: #fff0f2;
+  --primary-soft: #fff1f4;
 
-  --secondary: #bde9fa;
-  --secondary-hover: #a5dff5;
+  --secondary: #f0f8fc;
+  --secondary-hover: #e4f3fa;
   --secondary-foreground: #164e63;
 
   --accent: #ff8089;
   --accent-soft: #fff1f2;
 
-  --surface: #f7fbfd;
+  --surface: #f8fbfd;
+  --surface-hover: #eef6fa;
   --muted: #64748b;
-  --border: #dbe7ec;
+  --border: #d8e5eb;
 
   --container-max-width: 75rem;
   --header-height: 4.5rem;
@@ -26,6 +27,6 @@
   --radius-lg: 1.25rem;
   --radius-full: 9999px;
 
-  --shadow-sm: 0 0.25rem 1rem rgb(15 23 42 / 6%);
-  --shadow-md: 0 1rem 2.5rem rgb(15 23 42 / 10%);
+  --shadow-sm: 0 0.25rem 1rem rgb(15 23 42 / 5%);
+  --shadow-md: 0 1rem 2.5rem rgb(15 23 42 / 8%);
 }
