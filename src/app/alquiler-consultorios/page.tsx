@@ -7,6 +7,7 @@ import {
   Heading,
   Section,
 } from "@/components/ui";
+import { RentalIcon, type RentalIconName } from "@/components/ui/icons/rental-icons";
 
 export const metadata: Metadata = {
   title: "Alquiler de consultorios",
@@ -19,23 +20,31 @@ const benefits = [
     title: "Consultorios equipados",
     description:
       "Espacios preparados para comenzar a atender desde el primer día.",
+    icon: "office",
   },
   {
     title: "Excelente ubicación",
     description:
       "Un entorno accesible y pensado para brindar comodidad a profesionales y pacientes.",
+    icon: "location",
   },
   {
     title: "Horarios flexibles",
     description:
       "Disponibilidad de módulos adaptados a las necesidades de cada profesional.",
+    icon: "clock",
   },
   {
     title: "Ambiente profesional",
     description:
       "Instalaciones modernas dentro de un centro médico reconocido.",
+    icon: "professional",
   },
-];
+] satisfies {
+  title: string;
+  description: string;
+  icon: RentalIconName;
+}[];
 
 const includes = [
   "Consultorios completamente equipados",
@@ -120,12 +129,15 @@ export default function RentalOfficesPage() {
           </div>
 
           <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {benefits.map(({ title, description }) => (
+            {benefits.map(({ title, description, icon }) => (
               <article
                 key={title}
                 className="rounded-[1.5rem] border border-border bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
               >
-
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-primary-soft text-primary">
+                  <RentalIcon name={icon} className="size-6" />
+                </div>
+                
                 <h3 className="text-lg font-semibold text-foreground">
                   {title}
                 </h3>
@@ -179,6 +191,10 @@ export default function RentalOfficesPage() {
                   "Entorno profesional.",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
+
+                    <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-primary-soft text-primary">
+                      <RentalIcon name="check" className="size-4" />
+                    </span>
 
                     <span className="text-muted">{item}</span>
                   </li>
