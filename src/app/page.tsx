@@ -28,21 +28,12 @@ export default function Home() {
             <CTA
               eyebrow="Turnos online"
               title="Solicitá tu turno sin llamar a recepción"
-              description="El acceso definitivo será reemplazado por el enlace del sistema de gestión."
+              description=""
               primaryAction={{
-                label: "Acceso próximamente",
-                href: "#turnos",
+                label: "¿Cómo sacar turno?",
+                href: "/como-sacar-turno",
               }}
             />
-            <p className="text-muted mt-4 text-center text-sm">
-              ¿No sabés cómo sacar un turno?{" "}
-              <Link
-                href="/como-sacar-turno"
-                className="text-primary hover:text-primary-hover font-semibold"
-              >
-                Mirá el paso a paso
-              </Link>
-            </p>
           </Reveal>
         </Container>
       </Section>
