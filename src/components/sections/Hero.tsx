@@ -122,6 +122,7 @@ export function Hero() {
                 alt={HERO_CONTENT.image.alt}
                 fill
                 preload
+                unoptimized
                 sizes="(max-width: 1023px) 100vw, 50vw"
                 className="object-cover object-center transition-transform duration-500 hover:scale-[1.02]" //cuando tengamos la foto cambiar esto por className="object-cover" --- otra cosa, la foto debe ser webp o avif y con buena resolucion -> 1600px de ancho y ser vertical no seas qlll --- dejá de llorar pa
               />
@@ -159,7 +160,7 @@ export function Hero() {
                     </p>
 
                     <p className="text-muted text-sm">
-                      Disponible desde la landing
+                      Disponible desde nuestro sistema de turnos
                     </p>
                   </div>
                 </div>
