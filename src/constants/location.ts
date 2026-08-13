@@ -1,7 +1,7 @@
 // src/constants/location.ts
 
 export const CLINIC_LOCATION = {
-  address: "Lavalle 584 Sur, San Miguel de Tucumán, Tucumán",
+  address: "Lavalle 584, San Miguel de Tucumán, Tucumán",
   // TODO: reemplazar por la URL real de Google Maps Embed
   // (Google Maps → Compartir → Insertar un mapa → copiar el "src" del iframe)
   mapEmbedSrc:
