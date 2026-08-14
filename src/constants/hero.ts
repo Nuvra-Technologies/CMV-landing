@@ -14,10 +14,25 @@ export const HERO_CONTENT = {
     href: "/especialidades",
   },
 
-  image: {
-    src: "/images/hero-image.jpg", // aqui hay que poner la foto del hero y cambiar la propiedad en Hero.tsx de sections, linea 120
-    alt: "Imagen del Centro Médico CMV visto desde afuera",
+  tertiaryAction: {
+    label: "Alquilar consultorios",
+    href: "/alquiler-consultorios",
   },
+
+  images: [
+    {
+      src: "/images/hero-image.jpg",
+      alt: "Imagen del Centro Médico CMV visto desde afuera",
+    },
+    {
+      src: "/images/reception.jpg",
+      alt: "Recepción del Centro Médico CMV",
+    },
+    {
+      src: "/images/waiting-room.jpg",
+      alt: "Sala de espera del Centro Médico CMV",
+    },
+  ],
 
   indicators: [
     "Más de 14 años de trayectoria",

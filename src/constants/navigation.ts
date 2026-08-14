@@ -13,7 +13,7 @@ export const MAIN_NAVIGATION: NavigationItem[] = [
     href: "/especialidades",
   },
   {
-    label: "Consultorios",
+    label: "Alquiler consultorios",
     href: "/alquiler-consultorios",
   },
   {

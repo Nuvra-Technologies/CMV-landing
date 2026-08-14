@@ -5,10 +5,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import { Button, Container } from "@/components/ui";
-import {
-  APPOINTMENT_URL,
-  MAIN_NAVIGATION,
-} from "@/constants/navigation";
+import { APPOINTMENT_URL, MAIN_NAVIGATION } from "@/constants/navigation";
 import { cn } from "@/lib/cn";
 
 export function Header() {
@@ -57,10 +54,7 @@ export function Header() {
     desktopMediaQuery.addEventListener("change", handleDesktopChange);
 
     return () => {
-      desktopMediaQuery.removeEventListener(
-        "change",
-        handleDesktopChange,
-      );
+      desktopMediaQuery.removeEventListener("change", handleDesktopChange);
     };
   }, []);
 
@@ -78,15 +72,15 @@ export function Header() {
         "sticky top-0 z-40 w-full border-b transition-all duration-300",
         isScrolled
           ? "border-border bg-background/95 shadow-sm backdrop-blur-md"
-          : "border-transparent bg-background/90",
+          : "bg-background/90 border-transparent",
       )}
     >
       <Container>
-        <div className="flex h-[var(--header-height)] items-center justify-between gap-4">
+        <div className="flex h-(--header-height) items-center justify-between gap-4">
           <Link
             href="/#inicio"
-            aria-label="CMV - Ir al inicio"
-            className="flex shrink-0 items-center gap-3 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+            aria-label="Centro de Medicina Vascular Corazón de Jesús - Ir al inicio"
+            className="focus-visible:ring-primary flex shrink-0 items-center gap-3 rounded-md focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
             onClick={closeMenu}
           >
             <Image
@@ -95,24 +89,26 @@ export function Header() {
               width={48}
               height={48}
               priority
-              className="size-12 object-contain"
+              className="size-10 object-contain sm:size-12"
             />
 
-            <span className="text-foreground text-xl font-bold tracking-tight">
-              CMV
+            <span className="text-foreground text-xl font-bold tracking-tight sm:hidden">CMV</span>
+
+            <span className="hidden flex-col leading-tight sm:flex">
+              <span className="text-foreground text-sm font-bold tracking-tight lg:text-base">
+                Centro de Medicina Vascular
+              </span>
+              <span className="text-muted text-xs font-medium">Corazón de Jesús</span>
             </span>
           </Link>
 
-          <nav
-            aria-label="Navegación principal"
-            className="hidden lg:block"
-          >
+          <nav aria-label="Navegación principal" className="hidden lg:block">
             <ul className="flex items-center gap-1">
               {MAIN_NAVIGATION.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-muted hover:text-primary focus-visible:text-primary block rounded-full px-3 py-2 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                    className="text-muted hover:text-primary focus-visible:text-primary focus-visible:ring-primary block rounded-full px-3 py-2 text-sm font-semibold transition-colors focus-visible:ring-2 focus-visible:outline-none"
                   >
                     {item.label}
                   </Link>
@@ -122,7 +118,7 @@ export function Header() {
           </nav>
 
           <div className="hidden shrink-0 lg:block">
-            <Button href={APPOINTMENT_URL} size="sm">
+            <Button href={APPOINTMENT_URL} size="sm" variant="outline">
               Sacar turno
             </Button>
           </div>
@@ -131,13 +127,9 @@ export function Header() {
             type="button"
             aria-controls="mobile-navigation"
             aria-expanded={isMenuOpen}
-            aria-label={
-              isMenuOpen
-                ? "Cerrar menú de navegación"
-                : "Abrir menú de navegación"
-            }
+            aria-label={isMenuOpen ? "Cerrar menú de navegación" : "Abrir menú de navegación"}
             onClick={toggleMenu}
-            className="text-foreground hover:bg-surface inline-flex size-11 items-center justify-center rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary lg:hidden"
+            className="text-foreground hover:bg-surface focus-visible:ring-primary inline-flex size-11 items-center justify-center rounded-full transition-colors focus-visible:ring-2 focus-visible:outline-none lg:hidden"
           >
             {isMenuOpen ? (
               <svg
@@ -180,17 +172,14 @@ export function Header() {
           )}
         >
           <div className="overflow-hidden">
-            <nav
-              aria-label="Navegación móvil"
-              className="border-border border-t py-4"
-            >
+            <nav aria-label="Navegación móvil" className="border-border border-t py-4">
               <ul className="flex flex-col gap-1">
                 {MAIN_NAVIGATION.map((item) => (
                   <li key={item.href}>
                     <Link
                       href={item.href}
                       onClick={closeMenu}
-                      className="text-foreground hover:bg-surface hover:text-primary block rounded-xl px-4 py-3 font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                      className="text-foreground hover:bg-surface hover:text-primary focus-visible:ring-primary block rounded-xl px-4 py-3 font-semibold transition-colors focus-visible:ring-2 focus-visible:outline-none"
                     >
                       {item.label}
                     </Link>
@@ -199,11 +188,7 @@ export function Header() {
               </ul>
 
               <div className="mt-4 px-4">
-                <Button
-                  href={APPOINTMENT_URL}
-                  onClick={closeMenu}
-                  fullWidth
-                >
+                <Button href={APPOINTMENT_URL} onClick={closeMenu} variant="outline" fullWidth>
                   Sacar turno
                 </Button>
               </div>

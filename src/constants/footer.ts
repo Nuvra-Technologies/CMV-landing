@@ -33,17 +33,17 @@ export const FOOTER_QUICK_LINKS = [
 export const FOOTER_CONTACT_LINKS = [
   {
     label: "Teléfono",
-    value: "Número a confirmar",
+    value: "+54 381 420-3593",
     href: null,
   },
   {
     label: "WhatsApp de recepción",
-    value: "Número a confirmar",
+    value: "+54 381 420-3593",
     href: null,
   },
   {
     label: "Dirección",
-    value: "Dirección a confirmar",
+    value: "Lavalle 584, San Miguel de Tucumán",
     href: null,
   },
 ] as const;
