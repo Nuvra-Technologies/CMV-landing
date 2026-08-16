@@ -51,6 +51,6 @@ export const FOOTER_CONTACT_LINKS = [
 export const FOOTER_SOCIAL_LINKS = [
   {
     label: "Instagram",
-    href: null,
+    href: "https://www.instagram.com/cmv.corazondejesus?igsh=MW1sbGE0dTcwbG9paQ==",
   },
 ] as const;
