@@ -27,5 +27,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.8,
             changeFrequency: "monthly",
         },
+        {
+            url: "https://cmvcorazondejesus.com/como-sacar-turno",
+            priority: 0.8,
+            changeFrequency: "monthly",
+        },
     ];
 }
