@@ -93,8 +93,6 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
 
-  manifest: "/site.webmanifest",
-
   // Cuando esté el Search Console
   // verification: {
   //   google: "codigo-google",
