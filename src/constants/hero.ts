@@ -18,6 +18,14 @@ export const HERO_CONTENT = {
     label: "Alquilar consultorios",
     href: "/alquiler-consultorios",
   },
+  
+  whyChooseUs: {
+    title: "¿Por qué elegirnos?",
+    items: [
+      "Equipamiento de alta complejidad",
+      "Atención profesional y personalizada",
+    ],
+  },
 
   images: [
     {

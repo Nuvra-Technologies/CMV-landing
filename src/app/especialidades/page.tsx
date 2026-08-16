@@ -1,17 +1,14 @@
-// src/app/especialidades/page.tsx
 import { Container, Heading, Reveal, Section } from "@/components/ui";
+import { EquipmentHighlight } from "@/components/ui/EquipmentHighlight";
 import { SpecialtiesGrid } from "@/components/ui/SpecialtiesGrid";
 import { SPECIALTIES } from "@/constants/specialties";
 
 function groupByCategory(specialties: typeof SPECIALTIES) {
-  return specialties.reduce<Record<string, typeof SPECIALTIES>>(
-    (groups, specialty) => {
-      groups[specialty.category] ??= [];
-      groups[specialty.category].push(specialty);
-      return groups;
-    },
-    {},
-  );
+  return specialties.reduce<Record<string, typeof SPECIALTIES>>((groups, specialty) => {
+    groups[specialty.category] ??= [];
+    groups[specialty.category].push(specialty);
+    return groups;
+  }, {});
 }
 
 export default function EspecialidadesPage() {
@@ -39,6 +36,10 @@ export default function EspecialidadesPage() {
       <Section spacing="lg">
         <Container>
           <div className="flex flex-col gap-16">
+            <Reveal direction="up">
+              <EquipmentHighlight />
+            </Reveal>
+
             {Object.entries(groups).map(([category, specialties]) => (
               <div key={category}>
                 <Reveal direction="up">
