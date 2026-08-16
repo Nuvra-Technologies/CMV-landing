@@ -112,32 +112,71 @@ export function Hero() {
             <div className="border-border from-secondary via-background to-primary-soft relative aspect-4/5 overflow-hidden rounded-4xl border bg-linear-to-br shadow-md sm:aspect-4/3 lg:aspect-4/5">
               <HeroImageCarousel images={HERO_CONTENT.images} />
 
-              <div className="absolute right-4 bottom-4 left-4 rounded-2xl border border-white/70 bg-white/90 p-4 shadow-sm backdrop-blur-md sm:right-auto sm:max-w-xs">
-                <div className="flex items-center gap-3">
-                  <IconWrapper size="md" variant="accent">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
-                    >
-                      <rect x="3" y="5" width="18" height="16" rx="2" />
-                      <path d="M16 3v4" />
-                      <path d="M8 3v4" />
-                      <path d="M3 11h18" />
-                      <path d="M8 15h2" />
-                      <path d="M14 15h2" />
-                    </svg>
-                  </IconWrapper>
+              <div className="absolute right-4 bottom-4 left-4 flex flex-col gap-2 sm:flex-row sm:items-start">
+                {/* Card "Turnos online" + botón */}
+                <div className="flex flex-col gap-2 rounded-xl border border-white/70 bg-white/90 p-3 shadow-sm backdrop-blur-md sm:flex-1">
+                  <div className="flex items-center gap-2">
+                    <IconWrapper size="sm" variant="accent">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
+                      >
+                        <rect x="3" y="5" width="18" height="16" rx="2" />
+                        <path d="M16 3v4" />
+                        <path d="M8 3v4" />
+                        <path d="M3 11h18" />
+                        <path d="M8 15h2" />
+                        <path d="M14 15h2" />
+                      </svg>
+                    </IconWrapper>
 
-                  <div>
-                    <p className="text-foreground font-bold">Turnos online</p>
-
-                    <p className="text-muted text-sm">Disponible desde nuestro sistema de turnos</p>
+                    <div>
+                      <p className="text-foreground text-sm font-bold">Turnos online</p>
+                      <p className="text-muted text-xs">Sistema de turnos online</p>
+                    </div>
                   </div>
+
+                  <Button href={HERO_CONTENT.primaryAction.href} size="sm" fullWidth>
+                    Sacar turno
+                  </Button>
+                </div>
+
+                {/* Card "¿Por qué elegirnos?" */}
+                <div className="rounded-xl border border-white/70 bg-white/90 p-3 shadow-sm backdrop-blur-md sm:flex-1">
+                  <p className="text-foreground text-xs font-bold">
+                    {HERO_CONTENT.whyChooseUs.title}
+                  </p>
+
+                  <ul className="mt-1.5 flex flex-col gap-1">
+                    {HERO_CONTENT.whyChooseUs.items.map((item) => (
+                      <li key={item} className="flex items-start gap-1.5">
+                        <IconWrapper
+                          size="sm"
+                          variant="primary"
+                          className="mt-0.5 size-3.5 [&>svg]:size-2.5"
+                        >
+                          <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="3"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            aria-hidden="true"
+                          >
+                            <path d="m5 12 4 4L19 6" />
+                          </svg>
+                        </IconWrapper>
+
+                        <span className="text-muted text-[0.7rem] leading-3.5">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </div>
