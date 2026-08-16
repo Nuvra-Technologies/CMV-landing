@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
+import { StructuredData } from "@/components/seo/StructuredData";
 
 import { 
   Footer,
@@ -133,6 +134,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="es-AR">
       <body className={`${inter.variable} font-sans antialiased`}>
+        <StructuredData />
+        
         <SiteLayout
           header={<Header />}
           footer={<Footer />}
