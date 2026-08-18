@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
+import { StructuredData } from "@/components/seo/StructuredData";
 
 import { 
   Footer,
@@ -16,7 +17,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  // metadataBase: new URL("https://cmv.com"), //cambiar por el dominio real
+  metadataBase: new URL("https://cmvcorazondejesus.com"),
 
   title: {
     default: "CMV | Centro Médico en Tucumán",
@@ -37,15 +38,15 @@ export const metadata: Metadata = {
 
   authors: [{ name: "CMV Centro Médico" }],
 
-  creator: "CMV",
-
-  publisher: "CMV",
+  creator: "CMV Centro Médico",
+  publisher: "CMV Centro Médico",
 
   category: "Health",
 
   robots: {
     index: true,
     follow: true,
+
     googleBot: {
       index: true,
       follow: true,
@@ -58,44 +59,40 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_AR",
-    // url: "https://cmv.com",
-    siteName: "CMV",
+    url: "https://cmvcorazondejesus.com/",
+    siteName: "CMV Centro Médico",
 
     title: "CMV | Centro Médico en Tucumán",
 
     description:
       "Centro Médico especializado en medicina vascular, cardiología y especialidades médicas.",
 
-    // images: [
-    //   {
-    //     url: "/og-image.jpg",
-    //     width: 1200,
-    //     height: 630,
-    //     alt: "Centro Médico CMV",
-    //   },
-    // ],
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "CMV Centro Médico en Tucumán",
+      },
+    ],
   },
 
   twitter: {
     card: "summary_large_image",
 
-    title: "CMV | Centro Médico",
+    title: "CMV | Centro Médico en Tucumán",
 
     description:
-      "Centro Médico especializado en medicina vascular y cardiología.",
+      "Centro Médico en Tucumán especializado en medicina vascular, cardiología y estudios cardiovasculares.",
 
-    // images: ["/og-image.jpg"],
+    images: ["/og-image.png"],
   },
 
   icons: {
     icon: "/favicon.ico",
-
     shortcut: "/favicon-16x16.png",
-
     apple: "/apple-touch-icon.png",
   },
-
-  manifest: "/site.webmanifest",
 
   // Cuando esté el Search Console
   // verification: {
@@ -121,8 +118,6 @@ export const metadata: Metadata = {
     title: "CMV",
     statusBarStyle: "default",
   },
-
-
 };
 
 export const viewport: Viewport = {
@@ -137,8 +132,10 @@ type RootLayoutProps = Readonly<{
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="es-AR">
+    <html lang="es-AR" data-scroll-behavior="smooth">
       <body className={`${inter.variable} font-sans antialiased`}>
+        <StructuredData />
+        
         <SiteLayout
           header={<Header />}
           footer={<Footer />}

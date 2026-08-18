@@ -10,34 +10,59 @@ import {
 import { RentalIcon, type RentalIconName } from "@/components/ui/icons/rental-icons";
 
 export const metadata: Metadata = {
-  title: "Alquiler de consultorios",
+  title: "Alquiler de Consultorios Médicos en Tucumán",
   description:
-    "Consultorios médicos equipados para profesionales de la salud en CMV Centro Médico.",
+    "Alquilá consultorios médicos equipados en CMV Centro Médico, Tucumán. Espacios climatizados, Wi-Fi, sala de espera y módulos horarios para profesionales de la salud.",
+  alternates: {
+    canonical: "/alquiler-consultorios",
+  },
+  openGraph: {
+    title: "Alquiler de Consultorios Médicos en Tucumán | CMV",
+    description:
+      "Consultorios médicos equipados y climatizados para profesionales de la salud en CMV Centro Médico, Tucumán.",
+    url: "/alquiler-consultorios",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "CMV Centro Médico en Tucumán",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Alquiler de Consultorios Médicos en Tucumán | CMV",
+    description:
+      "Consultorios médicos equipados y climatizados para profesionales de la salud en CMV Centro Médico.",
+    images: ["/og-image.png"],
+  },
 };
 
 const benefits = [
   {
-    title: "Consultorios equipados",
+    title: "Consultorios médicos equipados",
     description:
-      "Espacios preparados para comenzar a atender desde el primer día.",
+      "Consultorios amoblados y preparados para que profesionales de la salud puedan comenzar a atender.",
     icon: "office",
   },
   {
-    title: "Excelente ubicación",
+    title: "Ubicación en Tucumán",
     description:
-      "Un entorno accesible y pensado para brindar comodidad a profesionales y pacientes.",
+      "Una ubicación accesible en San Miguel de Tucumán, pensada para facilitar la llegada de profesionales y pacientes.",
     icon: "location",
   },
   {
-    title: "Horarios flexibles",
+    title: "Módulos horarios",
     description:
-      "Disponibilidad de módulos adaptados a las necesidades de cada profesional.",
+      "Elegí entre módulos de atención por la mañana o por la tarde, según la disponibilidad y las necesidades de tu práctica.",
     icon: "clock",
   },
   {
-    title: "Ambiente profesional",
+    title: "Entorno profesional",
     description:
-      "Instalaciones modernas dentro de un centro médico reconocido.",
+      "Espacios cómodos y funcionales dentro de un centro médico pensado para la atención de pacientes.",
     icon: "professional",
   },
 ] satisfies {
@@ -47,36 +72,36 @@ const benefits = [
 }[];
 
 const includes = [
-  "Consultorios completamente equipados",
-  "Ambientes climatizados",
+  "Consultorios médicos completamente equipados",
+  "Aire acondicionado frío/calor",
+  "Secretaría y recepción",
   "Sala de espera para pacientes",
-  "Conexión Wi-Fi",
+  "Conexión a internet",
   "Espacios luminosos y confortables",
-  "Excelente ubicación",
-  "Entorno profesional",
-  "Infraestructura moderna",
+  "Infraestructura profesional",
+  "Módulos de alquiler mensuales o por horario",
 ];
 
 const gallery = [
   {
     src: "/images/office-1.jpg",
-    alt: "Consultorio médico equipado en CMV",
-  },
-  {
-    src: "/images/office-2.jpg",
-    alt: "Sala de espera del centro médico",
-  },
-  {
-    src: "/images/office-3.jpg",
-    alt: "Consultorio luminoso con mobiliario",
-  },
-  {
-    src: "/images/reception.jpg",
     alt: "Espacio profesional para atención médica",
   },
   {
+    src: "/images/office-2.jpg",
+    alt: "Consultorio médico amoblado y equipado en CMV Centro Médico",
+  },
+  {
+    src: "/images/office-3.jpg",
+    alt: "Consultorio médico con escritorio y equipamiento en CMV Centro Médico",
+  },
+  {
+    src: "/images/reception.jpg",
+    alt: "Recepción de CMV Centro Médico en Tucumán",
+  },
+  {
     src: "/images/waiting-room.jpg",
-    alt: "Recepción de CMV",
+    alt: "Sala de espera de CMV Centro Médico",
   },
 ];
 
@@ -97,13 +122,15 @@ export default function RentalOfficesPage() {
               description="Consultorios completamente equipados para profesionales de la salud que buscan un espacio cómodo, moderno y listo para atender pacientes."
               wrapperClassName="mt-5"
             >
-              Alquiler de consultorios
+              Alquiler de consultorios médicos en Tucumán
             </Heading>
 
             <p className="mt-6 text-lg leading-8 text-muted">
-              En CMV ofrecemos espacios diseñados para brindar una atención
-              médica de calidad, con instalaciones modernas, excelente ubicación
-              y un entorno profesional pensado para vos y tus pacientes.
+              En CMV Centro Médico contamos con 25 consultorios amoblados,
+              climatizados y preparados para la atención profesional. Ofrecemos
+              modalidades de alquiler mensual y por módulos horarios, con
+              instalaciones pensadas para brindar comodidad tanto a profesionales
+              como a pacientes.
             </p>
 
             <div className="mt-10 flex justify-center">
@@ -259,6 +286,7 @@ export default function RentalOfficesPage() {
                 src={gallery[0].src}
                 alt={gallery[0].alt}
                 fill
+                sizes="(max-width: 1023px) 100vw, 58vw"
                 className="object-cover transition duration-500 hover:scale-105"
               />
             </div>
@@ -270,6 +298,7 @@ export default function RentalOfficesPage() {
                 src={gallery[1].src}
                 alt={gallery[1].alt}
                 fill
+                sizes="(max-width: 1023px) 100vw, 42vw"
                 className="object-cover transition duration-500 hover:scale-105"
               />
             </div>
@@ -281,6 +310,7 @@ export default function RentalOfficesPage() {
                 src={gallery[2].src}
                 alt={gallery[2].alt}
                 fill
+                sizes="(max-width: 1023px) 100vw, 42vw"
                 className="object-cover transition duration-500 hover:scale-105"
               />
             </div>
@@ -292,6 +322,7 @@ export default function RentalOfficesPage() {
                 src={gallery[3].src}
                 alt={gallery[3].alt}
                 fill
+                sizes="(max-width: 1023px) 100vw, 50vw"
                 className="object-cover transition duration-500 hover:scale-105"
               />
             </div>
@@ -301,6 +332,7 @@ export default function RentalOfficesPage() {
                 src={gallery[4].src}
                 alt={gallery[4].alt}
                 fill
+                sizes="(max-width: 1023px) 100vw, 50vw"
                 className="object-cover object-[center_57%] transition duration-500 hover:scale-105"
               />
             </div>

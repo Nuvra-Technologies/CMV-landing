@@ -13,6 +13,29 @@ import {
   getYearsSinceFoundation,
 } from "@/constants/institutional";
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "CMV Centro Médico | Información institucional en Tucumán",
+  description:
+    "Conocé CMV Centro Médico en Tucumán: nuestra historia, instalaciones, horarios de atención y servicios para pacientes y profesionales de la salud.",
+  alternates: {
+    canonical: "/institucional",
+  },
+  openGraph: {
+    title: "CMV Centro Médico | Información institucional en Tucumán",
+    description:
+      "Conocé la historia, instalaciones, horarios y servicios de CMV Centro Médico en Tucumán.",
+    url: "/institucional",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CMV Centro Médico | Información institucional en Tucumán",
+    description:
+      "Conocé la historia, instalaciones, horarios y servicios de CMV Centro Médico en Tucumán.",
+  },
+};
 
 function BuildingIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -69,7 +92,7 @@ export default function InstitutionalPage() {
                 eyebrow="Sobre nosotros"
                 wrapperClassName="mt-5"
               >
-                Información institucional
+                CMV Centro Médico en Tucumán
               </Heading>
 
               <p className="text-primary mt-4 text-lg font-semibold italic">
@@ -93,7 +116,7 @@ export default function InstitutionalPage() {
               description={INSTITUTIONAL.facilities.title}
               wrapperClassName="mx-auto max-w-2xl"
             >
-              Infraestructura y comodidades
+              Instalaciones de CMV Centro Médico
             </Heading>
           </Reveal>
 
@@ -127,7 +150,7 @@ export default function InstitutionalPage() {
               description="Conocé cuándo podés visitarnos como paciente o gestionar el alquiler de un consultorio."
               wrapperClassName="mx-auto max-w-2xl"
             >
-              Horarios de atención
+              Horarios de atención de CMV
             </Heading>
           </Reveal>
 
@@ -204,8 +227,9 @@ export default function InstitutionalPage() {
             >
               <Image
                 src="/images/office-2.jpg"
-                alt="Consultorio del Centro Médico CMV"
+                alt="Consultorio del Centro Médico CMV en Tucumán"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
             </Reveal>
