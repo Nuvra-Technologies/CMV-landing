@@ -33,12 +33,12 @@ export const FOOTER_QUICK_LINKS = [
 export const FOOTER_CONTACT_LINKS = [
   {
     label: "Teléfono",
-    value: "+54 381 420-3593",
+    value: "420-3593",
     href: null,
   },
   {
     label: "WhatsApp de recepción",
-    value: "+54 381 420-3593",
+    value: "+54 381 630-5232",
     href: null,
   },
   {

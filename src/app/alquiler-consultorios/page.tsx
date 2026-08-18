@@ -105,6 +105,9 @@ const gallery = [
   },
 ];
 
+export const WHATSAPP_RENTAL_URL =
+  "https://wa.me/5493816051033?text=Hola%2C%20quiero%20consultar%20por%20el%20alquiler%20de%20consultorios%20en%20CMV%20Centro%20M%C3%A9dico.";
+
 export default function RentalOfficesPage() {
   return (
     <>
@@ -134,7 +137,9 @@ export default function RentalOfficesPage() {
             </p>
 
             <div className="mt-10 flex justify-center">
-              <Button size="lg">Solicitar información</Button>
+              <Button href={WHATSAPP_RENTAL_URL} size="lg">
+                Solicitar información
+              </Button>
             </div>
           </div>
         </Container>
