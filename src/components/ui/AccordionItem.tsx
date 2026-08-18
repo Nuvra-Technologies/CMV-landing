@@ -82,6 +82,7 @@ export function AccordionItem({
         id={panelId}
         role="region"
         aria-labelledby={buttonId}
+        hidden={!isOpen}
         className="grid transition-[grid-template-rows] duration-300 ease-out motion-reduce:transition-none"
         style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}
       >

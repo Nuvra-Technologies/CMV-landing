@@ -9,14 +9,14 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     id: "como-saco-turno",
     category: "Turnos y consultas",
-    question: "¿Cómo puedo sacar un turno?",
+    question: "¿Cómo puedo sacar un turno médico?",
     answer:
       "Podés solicitar tu turno online desde la sección de turnos de la página, eligiendo la especialidad que necesites. También podés llamar a recepción si preferís coordinarlo por teléfono.",
   },
   {
     id: "que-obras-sociales-reciben",
     category: "Turnos y consultas",
-    question: "¿Qué obras sociales reciben?",
+    question: "¿Qué obras sociales y prepagas reciben?",
     answer:
       "Trabajamos con obras sociales y empresas de medicina prepaga. Si tenés dudas sobre tu cobertura, podés comunicarte con nosotros antes de solicitar el turno.",
   },
@@ -44,14 +44,14 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     id: "donde-estan-ubicados",
     category: "Consultas generales",
-    question: "¿Dónde están ubicados?",
+    question: "¿Dónde está ubicado CMV Centro Médico?",
     answer:
       "Nos encontramos en Lavalle 584, San Miguel de Tucumán, Tucumán. Podés ver nuestra ubicación en el mapa de la sección de contacto.",
   },
   {
     id: "puedo-alquilar-consultorio",
     category: "Consultorios y alquileres",
-    question: "¿Puedo alquilar un consultorio?",
+    question: "¿Puedo alquilar un consultorio en CMV?",
     answer:
       "Sí. Contamos con consultorios completamente equipados disponibles en modalidad mensual y por módulos. Contactanos para conocer disponibilidad.",
   },

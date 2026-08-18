@@ -3,6 +3,29 @@ import { Accordion } from "@/components/ui/Accordion";
 import { Container, Heading, Reveal, Section } from "@/components/ui";
 import { FAQ_ITEMS } from "@/constants/faq";
 import { cn } from "@/lib/cn";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Preguntas frecuentes | CMV Centro Médico Tucumán",
+  description:
+    "Encontrá respuestas sobre turnos médicos, especialidades, estudios, coberturas, atención y servicios de CMV Centro Médico en Tucumán.",
+  alternates: {
+    canonical: "/preguntas-frecuentes",
+  },
+  openGraph: {
+    title: "Preguntas frecuentes | CMV Centro Médico Tucumán",
+    description:
+      "Respuestas a las consultas más frecuentes sobre turnos, especialidades, estudios, coberturas y atención en CMV Centro Médico.",
+    url: "/preguntas-frecuentes",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Preguntas frecuentes | CMV Centro Médico Tucumán",
+    description:
+      "Respuestas a las consultas más frecuentes sobre turnos, especialidades, estudios, coberturas y atención en CMV Centro Médico.",
+  },
+};
 
 function groupByCategory(items: typeof FAQ_ITEMS) {
   return items.reduce<Record<string, typeof FAQ_ITEMS>>((groups, item) => {
@@ -17,6 +40,8 @@ function slugify(text: string) {
     .toLowerCase()
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9\s-]/g, "")
+    .trim()
     .replace(/\s+/g, "-");
 }
 
@@ -34,7 +59,7 @@ export default function FAQPage() {
               align="center"
               size="lg"
               eyebrow="Información útil"
-              description="Respuestas claras a las consultas más habituales sobre turnos, coberturas y atención."
+              description="Encontrá respuestas sobre turnos médicos, especialidades, estudios, coberturas y atención en CMV Centro Médico."
               wrapperClassName="mx-auto max-w-2xl"
             >
               Preguntas frecuentes
