@@ -286,6 +286,7 @@ export default function RentalOfficesPage() {
                 src={gallery[0].src}
                 alt={gallery[0].alt}
                 fill
+                sizes="(max-width: 1023px) 100vw, 58vw"
                 className="object-cover transition duration-500 hover:scale-105"
               />
             </div>
@@ -297,6 +298,7 @@ export default function RentalOfficesPage() {
                 src={gallery[1].src}
                 alt={gallery[1].alt}
                 fill
+                sizes="(max-width: 1023px) 100vw, 42vw"
                 className="object-cover transition duration-500 hover:scale-105"
               />
             </div>
@@ -308,6 +310,7 @@ export default function RentalOfficesPage() {
                 src={gallery[2].src}
                 alt={gallery[2].alt}
                 fill
+                sizes="(max-width: 1023px) 100vw, 42vw"
                 className="object-cover transition duration-500 hover:scale-105"
               />
             </div>
@@ -319,6 +322,7 @@ export default function RentalOfficesPage() {
                 src={gallery[3].src}
                 alt={gallery[3].alt}
                 fill
+                sizes="(max-width: 1023px) 100vw, 50vw"
                 className="object-cover transition duration-500 hover:scale-105"
               />
             </div>
@@ -328,6 +332,7 @@ export default function RentalOfficesPage() {
                 src={gallery[4].src}
                 alt={gallery[4].alt}
                 fill
+                sizes="(max-width: 1023px) 100vw, 50vw"
                 className="object-cover object-[center_57%] transition duration-500 hover:scale-105"
               />
             </div>

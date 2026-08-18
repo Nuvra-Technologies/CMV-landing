@@ -132,7 +132,7 @@ type RootLayoutProps = Readonly<{
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="es-AR">
+    <html lang="es-AR" data-scroll-behavior="smooth">
       <body className={`${inter.variable} font-sans antialiased`}>
         <StructuredData />
         
