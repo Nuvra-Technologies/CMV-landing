@@ -14,7 +14,7 @@ export const siteConfig = {
     founded: "2011-12-23",
 
     location: {
-        streetAddress: "Lavalle 585",
+        streetAddress: "Lavalle 584",
         addressLocality: "San Miguel de Tucumán",
         addressRegion: "Tucumán",
         postalCode: "4000",
