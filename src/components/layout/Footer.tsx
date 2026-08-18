@@ -79,6 +79,8 @@ export function Footer() {
                   {contact.href ? (
                     <a
                       href={contact.href}
+                      target={contact.external ? "_blank" : undefined}
+                      rel={contact.external ? "noopener noreferrer" : undefined}
                       className="mt-1 inline-block text-sm text-white/70 transition-colors hover:text-white focus-visible:text-white focus-visible:outline-none"
                     >
                       {contact.value}

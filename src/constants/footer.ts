@@ -34,17 +34,20 @@ export const FOOTER_CONTACT_LINKS = [
   {
     label: "Teléfono",
     value: "420-3593",
-    href: null,
+    href: "tel:+543814203593",
+    external: false,
   },
   {
     label: "WhatsApp de recepción",
     value: "+54 381 630-5232",
-    href: null,
+    href: "https://wa.me/543816305232",
+    external: true,
   },
   {
     label: "Dirección",
     value: "Lavalle 584, San Miguel de Tucumán",
     href: null,
+    external: false,
   },
 ] as const;
 
