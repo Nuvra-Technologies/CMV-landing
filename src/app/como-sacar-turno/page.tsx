@@ -3,6 +3,37 @@ import { BookingQRCode } from "@/components/ui/BookingQRCode";
 import { BookingStepItem } from "@/components/ui/BookingStepItem";
 import { BOOKING_STEPS } from "@/constants/booking";
 import { APPOINTMENT_URL } from "@/constants/navigation";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Cómo sacar un turno médico | CMV Centro Médico",
+  description:
+    "Aprendé cómo sacar un turno médico online en CMV Centro Médico, Tucumán. Seguí el paso a paso y accedé fácilmente al sistema de turnos.",
+  keywords: [
+    "sacar turno médico Tucumán",
+    "turnos médicos Tucumán",
+    "turnos online Tucumán",
+    "solicitar turno médico",
+    "CMV Centro Médico",
+    "turnos CMV",
+  ],
+  alternates: {
+    canonical: "/como-sacar-turno",
+  },
+  openGraph: {
+    title: "Cómo sacar un turno médico | CMV Centro Médico",
+    description:
+      "Conocé el paso a paso para solicitar tu turno médico online en CMV Centro Médico.",
+    url: "/como-sacar-turno",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cómo sacar un turno médico | CMV Centro Médico",
+    description:
+      "Conocé el paso a paso para solicitar tu turno médico online en CMV Centro Médico.",
+  },
+}
 
 export default function BookingGuidePage() {
   return (
@@ -15,10 +46,10 @@ export default function BookingGuidePage() {
               align="center"
               size="lg"
               eyebrow="Turnos online"
-              description="Seguí estos pasos para solicitar tu turno desde el sistema de gestión de la clínica."
+              description="Conocé el paso a paso para solicitar tu turno médico en CMV Centro Médico de forma rápida y sencilla."
               wrapperClassName="mx-auto max-w-2xl"
             >
-              Cómo sacar un turno
+              Cómo sacar un turno médico
             </Heading>
           </Reveal>
 
