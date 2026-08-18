@@ -137,7 +137,7 @@ export default function RentalOfficesPage() {
             </p>
 
             <div className="mt-10 flex justify-center">
-              <Button href={WHATSAPP_RENTAL_URL} size="lg">
+              <Button href={WHATSAPP_RENTAL_URL} size="lg" target="_blank">
                 Solicitar información
               </Button>
             </div>
@@ -369,6 +369,8 @@ export default function RentalOfficesPage() {
               <Button
                 size="lg"
                 variant="secondary"
+                href={WHATSAPP_RENTAL_URL}
+                target="_blank"
               >
                 Solicitar información
               </Button>
