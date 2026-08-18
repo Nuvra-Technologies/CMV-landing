@@ -1,10 +1,29 @@
+import { siteConfig } from "@/lib/seo/site-config";
+
 export function getOrganizationSchema() {
     return {
         "@type": "Organization",
-        "@id": "https://cmvcorazondejesus.com/#organization",
-        name: "CMV Centro Médico",
-        url: "https://cmvcorazondejesus.com/",
-        description:
-            "CMV Centro Médico en Tucumán, especializado en medicina vascular, cardiología y múltiples especialidades médicas.",
+        "@id": `${siteConfig.url}/#organization`,
+        
+        name: siteConfig.name,
+        url: siteConfig.url,
+        
+        description: siteConfig.description,
+        slogan: siteConfig.slogan,
+        
+        foundingDate: siteConfig.founded,
+        
+        logo: {
+            "@type": "ImageObject",
+            url: `${siteConfig.url}${siteConfig.logo}`,
+        },
+    
+        image: `${siteConfig.url}${siteConfig.ogImage}`,
+    
+        contactPoint: {
+            "@id": `${siteConfig.url}/#contact`,
+        },
+    
+        sameAs: siteConfig.social,
     };
 }

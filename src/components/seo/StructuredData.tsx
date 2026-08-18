@@ -9,14 +9,13 @@ export function StructuredData() {
 
     const structuredData = {
         "@context": "https://schema.org",
+
         "@graph": [
-            {
-                ...organization,
-                contactPoint: {
-                    ...contactPoint,
-                },
-            },
+            organization,
+            
             medicalClinic,
+            
+            contactPoint,
         ],
     };
 
