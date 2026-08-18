@@ -8,8 +8,29 @@ import {
 } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: "Prepaga",
-  description: "Información sobre la futura prepaga de CMV.",
+  title: "Prepaga CMV | Próximamente",
+  description:
+    "CMV está preparando una nueva propuesta de cobertura médica. Próximamente encontrarás más información sobre la futura prepaga.",
+  robots: {
+    index: false,
+    follow: true,
+  },
+  alternates: {
+    canonical: "/prepaga",
+  },
+  openGraph: {
+    title: "Prepaga CMV | Próximamente",
+    description:
+      "Conocé próximamente la nueva propuesta de cobertura médica de CMV Centro Médico.",
+    url: "/prepaga",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Prepaga CMV | Próximamente",
+    description:
+      "CMV está preparando una nueva propuesta de cobertura médica.",
+  },
 };
 
 export default function PrepaidPage() {
@@ -31,7 +52,7 @@ export default function PrepaidPage() {
             description="Estamos preparando una nueva propuesta de cobertura médica. La información será incorporada próximamente."
             wrapperClassName="mt-5"
           >
-            Cuidarte será más simple
+            Prepaga CMV: próximamente
           </Heading>
         </div>
       </Container>
