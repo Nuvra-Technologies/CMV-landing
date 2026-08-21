@@ -10,11 +10,11 @@ export const FOOTER_QUICK_LINKS = [
   },
   {
     label: "Especialidades",
-    href: "/#especialidades",
+    href: "/especialidades",
   },
   {
     label: "Sacar turno",
-    href: "/#turnos",
+    href: "/turnos",
   },
   {
     label: "Alquiler de consultorios",
@@ -26,7 +26,7 @@ export const FOOTER_QUICK_LINKS = [
   },
   {
     label: "Preguntas frecuentes",
-    href: "/#preguntas-frecuentes",
+    href: "/preguntas-frecuentes",
   },
 ] as const;
 

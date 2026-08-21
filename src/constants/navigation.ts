@@ -5,15 +5,11 @@ export type NavigationItem = {
 
 export const MAIN_NAVIGATION: NavigationItem[] = [
   {
-    label: "Inicio",
-    href: "/#inicio",
-  },
-  {
     label: "Especialidades",
     href: "/especialidades",
   },
   {
-    label: "Alquiler consultorios",
+    label: "Alquiler de consultorios",
     href: "/alquiler-consultorios",
   },
   {
