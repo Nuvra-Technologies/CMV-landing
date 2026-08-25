@@ -37,6 +37,9 @@ export const metadata: Metadata = {
   },
 };
 
+export const WHATSAPP_RENTAL_URL =
+  "https://wa.me/5493816051033?text=Hola%2C%20quiero%20consultar%20por%20el%20alquiler%20de%20consultorios%20en%20CMV%20Centro%20M%C3%A9dico.";
+
 function BuildingIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}>
@@ -154,23 +157,13 @@ export default function InstitutionalPage() {
             </Heading>
           </Reveal>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2">
+          <div className="mt-12 grid gap-6 sm:grid-cols-1">
             <Reveal direction="up" delay={80}>
               <InfoCard title="Atención a pacientes" icon={<ClockIcon />}>
                 <p>{INSTITUTIONAL.attentionSchedule.days}</p>
                 <p className="text-foreground mt-1 font-semibold">
                   {INSTITUTIONAL.attentionSchedule.morning} y{" "}
                   {INSTITUTIONAL.attentionSchedule.afternoon}
-                </p>
-              </InfoCard>
-            </Reveal>
-
-            <Reveal direction="up" delay={140}>
-              <InfoCard title="Alquiler de consultorios" icon={<KeyIcon />}>
-                <p>{INSTITUTIONAL.officeRental.schedule.days}</p>
-                <p className="text-foreground mt-1 font-semibold">
-                  {INSTITUTIONAL.officeRental.schedule.morning} y{" "}
-                  {INSTITUTIONAL.officeRental.schedule.afternoon}
                 </p>
               </InfoCard>
             </Reveal>
@@ -212,9 +205,10 @@ export default function InstitutionalPage() {
               </p>
 
               <Button
-                href="/alquiler-consultorios"
+                href={WHATSAPP_RENTAL_URL}
                 size="lg"
                 className="mt-8"
+                target="_blank"
               >
                 Consultar disponibilidad
               </Button>

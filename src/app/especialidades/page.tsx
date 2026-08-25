@@ -56,7 +56,7 @@ export default function EspecialidadesPage() {
               align="center"
               size="lg"
               eyebrow="Atención integral"
-              description="Explorá todas las especialidades disponibles y sacá tu turno online en la que necesites."
+              description="Contamos con un equipo de profesionales especializados en diferentes áreas de la salud."
               wrapperClassName="mx-auto max-w-2xl"
             >
               Especialidades médicas en Tucumán
