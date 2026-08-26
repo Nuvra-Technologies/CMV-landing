@@ -28,7 +28,7 @@ export const SPECIALTIES: Specialty[] = [
     id: "cardiologia",
     slug: "cardiologia",
     name: "Cardiología",
-    category: "Cardiovascular",
+    category: "Cardiología - Medicina Vascular",
     description:
       "Prevención y tratamiento de enfermedades del corazón.",
     icon: "heart",
@@ -46,7 +46,7 @@ export const SPECIALTIES: Specialty[] = [
     id: "cirugia-vascular",
     slug: "cirugia-vascular",
     name: "Cirugía Vascular",
-    category: "Cardiovascular",
+    category: "Cardiología - Medicina Vascular",
     description:
       "Tratamiento quirúrgicos de arterias y venas.",
     icon: "pulse",
@@ -55,7 +55,7 @@ export const SPECIALTIES: Specialty[] = [
     id: "flebologia",
     slug: "flebologia",
     name: "Flebología",
-    category: "Cardiovascular",
+    category: "Cardiología - Medicina Vascular",
     description:
       "Diagnóstico y cuidado de la salud venosa.",
     icon: "veins",

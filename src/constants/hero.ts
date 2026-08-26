@@ -1,9 +1,8 @@
 export const HERO_CONTENT = {
   eyebrow: "Centro médico CMV",
-  title: "Medicina Vascular, Cardiología y Especialidades Médicas en Tucumán",
+  title: "Atención Médica especializada: Cardiología, Medicina Vascular y otras Especialidades Médicas en Tucumán",
   description:
-    "Tu salud es nuestra prioridad. Desde 2011 brindamos atención médica especializada en Tucumán, con un equipo de profesionales comprometidos, estudios cardiovasculares de alta complejidad y un sistema de turnos online pensado para ofrecer una experiencia ágil, cómoda y segura.",
-
+    "Tu salud es nuestra prioridad. Desde 2011 a través de su Centro Médico y Servicios sociales realizamos investigación, prevención, educación, diagnóstico y atención médica especializada en Cardiología, Medicina Vascular y otras especialidades médicas en Tucumán.",
   primaryAction: {
     label: "Solicitar turno",
     href: "/#turnos",
@@ -24,6 +23,7 @@ export const HERO_CONTENT = {
     items: [
       "Equipamiento de alta complejidad",
       "Atención profesional y personalizada",
+      "Todas las especialidades en un solo lugar"
     ],
   },
 

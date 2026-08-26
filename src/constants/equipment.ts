@@ -1,5 +1,5 @@
 export const HIGH_COMPLEXITY_EQUIPMENT = {
-  badge: "Uno de los 2 únicos centros en Tucumán",
+  badge: "Uno de los pocos centros en Tucumán",
   title: "Estudios vasculares de alta complejidad",
   description:
     "Contamos con tecnología de última generación para la evaluación vascular no invasiva, algo único en Tucumán.",

@@ -4,7 +4,7 @@ export const INSTITUTIONAL = {
   foundedDateISO: "2011-12-23",
   slogan: "Tu salud es nuestra prioridad",
   intro:
-    "CMV Centro Médico es una institución de salud de Tucumán dedicada a la atención médica y al diagnóstico, con un equipo interdisciplinario de profesionales.",
+    "Desde 2011 a través de su Centro Médico y Servicios Sociales realizamos Investigación, prevención, educación, diagnóstico y atención médica especializada en Cardiología, Medicina Vascular y otras especialidades médicas en Tucumán.",
   fullInfo: 
     `En CMV creemos que una buena atención médica comienza con la confianza. Desde nuestra fundación, el 23 de diciembre de 2011, trabajamos para brindar un servicio basado en la excelencia profesional, la actualización constante y el acompañamiento de cada paciente.
     Somos el único Centro de Medicina Vascular en Tucumán y contamos con un equipo interdisciplinario de especialistas que trabaja de manera coordinada para ofrecer diagnósticos precisos y tratamientos adaptados a cada necesidad.
@@ -39,7 +39,7 @@ export const INSTITUTIONAL = {
   officeRental: {
     description:
       "Alquilamos consultorios a profesionales de la salud, con la posibilidad de elegir la modalidad que mejor se adapte a tu actividad.",
-    modalities: ["Alquiler mensual", "Alquiler por módulos"],
+    modalities: ["Alquiler por módulos"],
     schedule: {
       days: "Lunes a viernes",
       morning: "8 a 13hs",
