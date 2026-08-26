@@ -109,12 +109,12 @@ export function Hero() {
               className="bg-accent absolute -bottom-5 -left-5 size-24 rounded-full opacity-25 sm:size-36"
             />
 
-            <div className="border-border from-secondary via-background to-primary-soft relative aspect-4/5 overflow-hidden rounded-4xl border bg-linear-to-br shadow-md sm:aspect-4/3 lg:aspect-4/5">
+            <div className="border-border from-secondary via-background to-primary-soft relative aspect-[2/3] overflow-hidden rounded-4xl border bg-linear-to-br shadow-md sm:aspect-4/3 lg:aspect-4/5">
               <HeroImageCarousel images={HERO_CONTENT.images} />
 
-              <div className="absolute right-4 bottom-4 left-4 flex flex-col gap-2 sm:flex-row sm:items-start">
+              <div className="absolute inset-x-3 bottom-3 flex flex-col gap-2 sm:inset-x-4 sm:bottom-4 sm:flex-row sm:items-end sm:gap-3">
                 {/* Card "Turnos online" + botón */}
-                <div className="flex flex-col gap-2 rounded-xl border border-white/70 bg-white/90 p-3 shadow-sm backdrop-blur-md sm:flex-1">
+                <div className="flex flex-col gap-2 rounded-xl border border-white/70 bg-white/90 p-2.5 shadow-sm backdrop-blur-md sm:flex-1 sm:p-3">
                   <div className="flex items-center gap-2">
                     <IconWrapper size="sm" variant="accent">
                       <svg
@@ -135,9 +135,9 @@ export function Hero() {
                       </svg>
                     </IconWrapper>
 
-                    <div>
-                      <p className="text-foreground text-sm font-bold">Turnos online</p>
-                      <p className="text-muted text-xs">Sistema de turnos online</p>
+                    <div className="min-w-0">
+                      <p className="text-foreground text-sm font-bold leading-tight">Turnos online</p>
+                      <p className="text-muted text-xs leading-tight">Sistema de turnos online</p>
                     </div>
                   </div>
 
@@ -148,17 +148,17 @@ export function Hero() {
 
                 {/* Card "¿Por qué elegirnos?" */}
                 <div className="rounded-xl border border-white/70 bg-white/90 p-3 shadow-sm backdrop-blur-md sm:flex-1">
-                  <p className="text-foreground text-xs font-bold">
+                  <p className="text-foreground text-xs font-bold leading-tight">
                     {HERO_CONTENT.whyChooseUs.title}
                   </p>
 
-                  <ul className="mt-1.5 flex flex-col gap-1">
+                  <ul className="mt-2 flex gap-x-3 overflow-x-auto pb-0.5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:flex-col sm:gap-1 sm:overflow-visible">
                     {HERO_CONTENT.whyChooseUs.items.map((item) => (
-                      <li key={item} className="flex items-start gap-1.5">
+                      <li key={item} className="flex shrink-0 items-center gap-1.5 sm:items-start">
                         <IconWrapper
                           size="sm"
                           variant="primary"
-                          className="mt-0.5 size-3.5 [&>svg]:size-2.5"
+                          className="size-3.5 shrink-0 [&>svg]:size-2.5"
                         >
                           <svg
                             viewBox="0 0 24 24"
@@ -173,7 +173,7 @@ export function Hero() {
                           </svg>
                         </IconWrapper>
 
-                        <span className="text-muted text-[0.7rem] leading-3.5">{item}</span>
+                        <span className="text-muted text-[0.7rem] leading-snug">{item}</span>
                       </li>
                     ))}
                   </ul>
