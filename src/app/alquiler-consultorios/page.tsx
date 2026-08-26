@@ -111,6 +111,84 @@ export const WHATSAPP_RENTAL_URL =
 export default function RentalOfficesPage() {
   return (
     <>
+      {/* GALERÍA */}
+
+      <Section className="bg-surface">
+        <Container>
+          <div className="text-center">
+            <Heading
+              as="h2"
+              size="lg"
+              eyebrow="Galería"
+              description="Conocé algunos de los espacios disponibles para desarrollar tu actividad profesional."
+            >
+              Nuestros consultorios
+            </Heading>
+          </div>
+
+          <div className="mt-14 grid auto-rows-60 gap-5 lg:grid-cols-12">
+            {/* Imagen grande */}
+
+            <div className="relative overflow-hidden rounded-4xl border border-border lg:col-span-7 lg:row-span-2">
+              <Image
+                src={gallery[0].src}
+                alt={gallery[0].alt}
+                fill
+                sizes="(max-width: 1023px) 100vw, 58vw"
+                className="object-cover transition duration-500 hover:scale-105"
+                priority
+              />
+            </div>
+
+            {/* Superior derecha */}
+
+            <div className="relative overflow-hidden rounded-4xl border border-border lg:col-span-5">
+              <Image
+                src={gallery[1].src}
+                alt={gallery[1].alt}
+                fill
+                sizes="(max-width: 1023px) 100vw, 42vw"
+                className="object-cover transition duration-500 hover:scale-105"
+              />
+            </div>
+
+            {/* Inferior derecha */}
+
+            <div className="relative overflow-hidden rounded-4xl border border-border lg:col-span-5">
+              <Image
+                src={gallery[2].src}
+                alt={gallery[2].alt}
+                fill
+                sizes="(max-width: 1023px) 100vw, 42vw"
+                className="object-cover transition duration-500 hover:scale-105"
+              />
+            </div>
+
+            {/* Inferiores */}
+
+            <div className="relative overflow-hidden rounded-4xl border border-border lg:col-span-6">
+              <Image
+                src={gallery[3].src}
+                alt={gallery[3].alt}
+                fill
+                sizes="(max-width: 1023px) 100vw, 50vw"
+                className="object-cover transition duration-500 hover:scale-105"
+              />
+            </div>
+
+            <div className="relative overflow-hidden rounded-4xl border border-border lg:col-span-6">
+              <Image
+                src={gallery[4].src}
+                alt={gallery[4].alt}
+                fill
+                sizes="(max-width: 1023px) 100vw, 50vw"
+                className="object-cover object-[center_57%] transition duration-500 hover:scale-105"
+              />
+            </div>
+          </div>
+        </Container>
+      </Section>
+
       {/* HERO */}
 
       <Section className="bg-secondary">
@@ -164,12 +242,12 @@ export default function RentalOfficesPage() {
             {benefits.map(({ title, description, icon }) => (
               <article
                 key={title}
-                className="rounded-[1.5rem] border border-border bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+                className="rounded-3xl border border-border bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
               >
                 <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-primary-soft text-primary">
                   <RentalIcon name={icon} className="size-6" />
                 </div>
-                
+
                 <h3 className="text-lg font-semibold text-foreground">
                   {title}
                 </h3>
@@ -188,14 +266,13 @@ export default function RentalOfficesPage() {
       <Section className="bg-surface">
         <Container>
           <div className="grid items-center gap-14 lg:grid-cols-2">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] border border-border shadow-md">
+            <div className="relative aspect-4/3 overflow-hidden rounded-4xl border border-border shadow-md">
               <Image
                 src="/images/office-4.jpg"
                 alt="Consultorio médico completamente equipado en CMV Centro Médico"
                 fill
                 className="object-cover transition duration-500 hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                priority
               />
             </div>
 
@@ -223,7 +300,6 @@ export default function RentalOfficesPage() {
                   "Entorno profesional.",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
-
                     <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-primary-soft text-primary">
                       <RentalIcon name="check" className="size-4" />
                     </span>
@@ -258,7 +334,6 @@ export default function RentalOfficesPage() {
                 key={item}
                 className="flex items-center gap-3 rounded-xl border border-border bg-white p-5 shadow-sm transition hover:bg-surface hover:shadow-md"
               >
-
                 <span className="text-sm font-medium text-foreground">
                   {item}
                 </span>
@@ -268,88 +343,11 @@ export default function RentalOfficesPage() {
         </Container>
       </Section>
 
-      {/* GALERÍA */}
-
-      <Section className="bg-surface">
-        <Container>
-          <div className="text-center">
-            <Heading
-              as="h2"
-              size="lg"
-              eyebrow="Galería"
-              description="Conocé algunos de los espacios disponibles para desarrollar tu actividad profesional."
-            >
-              Nuestros consultorios
-            </Heading>
-          </div>
-
-          <div className="mt-14 grid auto-rows-[240px] gap-5 lg:grid-cols-12">
-            {/* Imagen grande */}
-
-            <div className="relative overflow-hidden rounded-[2rem] border border-border lg:col-span-7 lg:row-span-2">
-              <Image
-                src={gallery[0].src}
-                alt={gallery[0].alt}
-                fill
-                sizes="(max-width: 1023px) 100vw, 58vw"
-                className="object-cover transition duration-500 hover:scale-105"
-              />
-            </div>
-
-            {/* Superior derecha */}
-
-            <div className="relative overflow-hidden rounded-[2rem] border border-border lg:col-span-5">
-              <Image
-                src={gallery[1].src}
-                alt={gallery[1].alt}
-                fill
-                sizes="(max-width: 1023px) 100vw, 42vw"
-                className="object-cover transition duration-500 hover:scale-105"
-              />
-            </div>
-
-            {/* Inferior derecha */}
-
-            <div className="relative overflow-hidden rounded-[2rem] border border-border lg:col-span-5">
-              <Image
-                src={gallery[2].src}
-                alt={gallery[2].alt}
-                fill
-                sizes="(max-width: 1023px) 100vw, 42vw"
-                className="object-cover transition duration-500 hover:scale-105"
-              />
-            </div>
-
-            {/* Inferiores */}
-
-            <div className="relative overflow-hidden rounded-[2rem] border border-border lg:col-span-6">
-              <Image
-                src={gallery[3].src}
-                alt={gallery[3].alt}
-                fill
-                sizes="(max-width: 1023px) 100vw, 50vw"
-                className="object-cover transition duration-500 hover:scale-105"
-              />
-            </div>
-
-            <div className="relative overflow-hidden rounded-[2rem] border border-border lg:col-span-6">
-              <Image
-                src={gallery[4].src}
-                alt={gallery[4].alt}
-                fill
-                sizes="(max-width: 1023px) 100vw, 50vw"
-                className="object-cover object-[center_57%] transition duration-500 hover:scale-105"
-              />
-            </div>
-          </div>
-        </Container>
-      </Section>
-
       {/* CTA */}
 
       <Section>
         <Container>
-          <div className="rounded-[2rem] bg-primary px-8 py-16 text-center text-white shadow-md">
+          <div className="rounded-4xl bg-primary px-8 py-16 text-center text-white shadow-md">
             <Badge className="border-white/20 bg-white/10 text-white">
               Consultas
             </Badge>
