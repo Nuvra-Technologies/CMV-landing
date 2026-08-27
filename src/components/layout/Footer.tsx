@@ -32,8 +32,14 @@ export function Footer() {
                 />
               </span>
 
-              <span className="text-2xl font-bold tracking-tight">
-                CMV
+              <span className="flex flex-col leading-tight">
+                <span className="text-sm font-bold tracking-tight text-white sm:text-base">
+                  Centro de Medicina Vascular
+                </span>
+
+                <span className="text-xs font-medium text-white/60">
+                  Corazón de Jesús
+                </span>
               </span>
             </Link>
 

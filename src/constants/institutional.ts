@@ -11,7 +11,7 @@ export const INSTITUTIONAL = {
     Nuestra institución combina experiencia médica, tecnología para estudios de alta complejidad y un sistema de atención organizado que permite acceder fácilmente a consultas, controles y estudios complementarios.`,
 
   facilities: {
-    consultoriosCount: 25,
+    consultoriosCount: 23,
     title:
       "Una infraestructura pensada para brindar atención médica en un entorno cómodo y profesional.",
     description:
@@ -19,7 +19,7 @@ export const INSTITUTIONAL = {
       Disponemos de 25 consultorios amoblados, equipados con aire acondicionado frío/calor, servicio de secretaría, conexión a internet y todas las comodidades necesarias para la atención ambulatoria.
       Ofrecemos modalidades de alquiler mensual y por módulos, adaptándonos a las necesidades de cada profesional.`,
     features: [
-      { id: "consultorios", label: "25 consultorios amoblados" },
+      { id: "consultorios", label: "23 consultorios amoblados" },
       { id: "climatizacion", label: "Aire acondicionado frío/calor" },
       { id: "secretaria", label: "Secretarías" },
       { id: "internet", label: "Internet" },
@@ -32,7 +32,7 @@ export const INSTITUTIONAL = {
 
   attentionSchedule: {
     days: "Lunes a viernes",
-    morning: "8:30 a 13hs",
+    morning: "8:00 a 13hs",
     afternoon: "16 a 21hs",
   },
 

@@ -8,9 +8,9 @@ import {
 } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: "Prepaga CMV | Próximamente",
+  title: "Servicio Social CMV Corazón de Jesús | Próximamente",
   description:
-    "CMV está preparando una nueva propuesta de cobertura médica. Próximamente encontrarás más información sobre la futura prepaga.",
+    "CMV está preparando una nueva propuesta de cobertura médica. Próximamente encontrarás más información sobre el futuro servicio social.",
   robots: {
     index: false,
     follow: true,
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     canonical: "/prepaga",
   },
   openGraph: {
-    title: "Prepaga CMV | Próximamente",
+    title: "Servicio Social CMV Corazón de Jesús | Próximamente",
     description:
       "Conocé próximamente la nueva propuesta de cobertura médica de CMV Centro Médico.",
     url: "/prepaga",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Prepaga CMV | Próximamente",
+    title: "Servicio Social CMV Corazón de Jesús | Próximamente",
     description:
       "CMV está preparando una nueva propuesta de cobertura médica.",
   },
@@ -48,11 +48,11 @@ export default function PrepaidPage() {
             as="h1"
             align="center"
             size="xl"
-            eyebrow="Prepaga CMV"
+            eyebrow="Servicio Social CMV"
             description="Estamos preparando una nueva propuesta de cobertura médica. La información será incorporada próximamente."
             wrapperClassName="mt-5"
           >
-            Prepaga CMV: próximamente
+            Servicio Social CMV Corazón de Jesús: próximamente
           </Heading>
         </div>
       </Container>

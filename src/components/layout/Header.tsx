@@ -80,7 +80,7 @@ export function Header() {
           <Link
             href="/#inicio"
             aria-label="Centro de Medicina Vascular Corazón de Jesús - Ir al inicio"
-            className="focus-visible:ring-primary flex shrink-0 items-center gap-3 rounded-md focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+            className="focus-visible:ring-primary flex min-w-0 items-center gap-2 rounded-md focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none sm:gap-3"
             onClick={closeMenu}
           >
             <Image
@@ -89,16 +89,17 @@ export function Header() {
               width={48}
               height={48}
               priority
-              className="size-10 object-contain sm:size-12"
+              className="size-10 shrink-0 object-contain sm:size-12"
             />
 
-            <span className="text-foreground text-xl font-bold tracking-tight sm:hidden">CMV</span>
-
-            <span className="hidden flex-col leading-tight sm:flex">
-              <span className="text-foreground text-sm font-bold tracking-tight lg:text-base">
+            <span className="flex min-w-0 flex-col leading-tight">
+              <span className="text-foreground whitespace-nowrap text-[0.7rem] font-bold tracking-tight sm:text-sm lg:text-base">
                 Centro de Medicina Vascular
               </span>
-              <span className="text-muted text-xs font-medium">Corazón de Jesús</span>
+
+              <span className="text-muted whitespace-nowrap text-[0.65rem] font-medium sm:text-xs">
+                Corazón de Jesús
+              </span>
             </span>
           </Link>
 
