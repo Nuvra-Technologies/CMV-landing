@@ -27,7 +27,7 @@ export default function Home() {
           <Reveal direction="up">
             <CTA
               eyebrow="Turnos online"
-              title="Solicitá tu turno sin llamar a recepción"
+              title="Solicitá tu turno paso a paso"
               description=""
               primaryAction={{
                 label: "¿Cómo sacar turno?",

@@ -207,7 +207,7 @@ export default function RentalOfficesPage() {
             </Heading>
 
             <p className="mt-6 text-lg leading-8 text-muted">
-              En CMV Centro Médico contamos con 25 consultorios amoblados,
+              En CMV Centro Médico contamos con 23 consultorios amoblados,
               climatizados y preparados para la atención profesional. Ofrecemos
               modalidades de alquiler mensual y por módulos horarios, con
               instalaciones pensadas para brindar comodidad tanto a profesionales

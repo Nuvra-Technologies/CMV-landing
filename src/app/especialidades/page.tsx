@@ -1,7 +1,8 @@
-import { Container, Heading, Reveal, Section } from "@/components/ui";
+import { Container, Heading, Reveal, Section, Button } from "@/components/ui";
 import { EquipmentHighlight } from "@/components/ui/EquipmentHighlight";
 import { SpecialtiesGrid } from "@/components/ui/SpecialtiesGrid";
 import { SPECIALTIES } from "@/constants/specialties";
+import { APPOINTMENT_URL } from "@/constants/navigation";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -84,6 +85,13 @@ export default function EspecialidadesPage() {
               </div>
             ))}
           </div>
+          <Reveal direction="up">
+            <div className="mt-16 flex justify-center">
+              <Button href={APPOINTMENT_URL} size="lg">
+                Sacar turno con un especialista
+              </Button>
+            </div>
+          </Reveal>
         </Container>
       </Section>
     </>
