@@ -7,7 +7,10 @@ export type BookingStepItemProps = {
   step: BookingStep;
 };
 
-export function BookingStepItem({ isLast = false, step }: BookingStepItemProps) {
+export function BookingStepItem({
+  isLast = false,
+  step,
+}: BookingStepItemProps) {
   return (
     <li className="relative flex gap-5 pb-10 last:pb-0">
       {!isLast && (
@@ -26,23 +29,22 @@ export function BookingStepItem({ isLast = false, step }: BookingStepItemProps) 
           {step.title}
         </h3>
 
-        <p className="text-muted mt-1.5 text-sm leading-6 sm:text-base">
-          {step.description}
-        </p>
+        <div className="text-muted mt-1.5 space-y-3 text-sm leading-6 sm:text-base">
+          {step.description.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
+        </div>
 
-        {step.image ? (
-          <div className="border-border relative mt-4 aspect-video w-full max-w-md overflow-hidden rounded-xl border shadow-sm">
+        {step.image && (
+          <div className="border-border relative mt-4 w-full max-w-md overflow-hidden rounded-xl border shadow-sm">
             <Image
               src={step.image.src}
               alt={step.image.alt}
-              fill
+              width={448}
+              height={252}
               sizes="(max-width: 639px) 100vw, 448px"
-              className="object-cover"
+              className="h-auto w-full"
             />
-          </div>
-        ) : (
-          <div className="border-border bg-surface text-muted mt-4 flex aspect-video w-full max-w-md items-center justify-center rounded-xl border border-dashed text-xs">
-            Captura del paso {step.number} (pendiente)
           </div>
         )}
       </div>
