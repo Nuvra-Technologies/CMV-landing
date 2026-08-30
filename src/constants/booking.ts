@@ -1,55 +1,73 @@
 export type BookingStep = {
-  description: string;
+  description: string[];
   id: string;
-  image?: { alt: string; src: string };
+  image?: {
+    alt: string;
+    src: string;
+  };
   number: number;
   title: string;
 };
 
-// reemplazar description por el texto exacto según cómo funcione
-// el sistema real, y sumar "image" con la captura de pantalla de cada paso
-// (ej: image: { src: "/booking-steps/paso-1.webp", alt: "..." })
 export const BOOKING_STEPS: BookingStep[] = [
   {
     id: "ingresar",
     number: 1,
     title: "Ingresá al sistema de turnos",
-    description:
+    description: [
       "Accedé al sistema de turnos online de CMV Centro Médico desde el botón de esta página o escaneando el código QR con la cámara de tu celular.",
+    ],
   },
   {
     id: "dni",
     number: 2,
     title: "Ingresá tu DNI",
-    description:
-      "Ingresá tu número de DNI para identificarte y continuar con la solicitud de tu turno médico.",
+    description: [
+      "Ingresá tu número de DNI sin puntos y seleccioná “Continuar”.",
+    ],
+    image: {
+      src: "/images/turno-1.png",
+      alt: "Captura de pantalla del paso 1 para solicitar un turno",
+    },
   },
   {
-    id: "especialidad",
+    id: "profesional",
     number: 3,
-    title: "Elegí la especialidad médica",
-    description:
-      "Seleccioná la especialidad médica que necesitás para consultar las opciones de atención disponibles.",
+    title: "Buscá al profesional",
+    description: [
+      "Ingresá la especialidad médica o el nombre del médico que querés consultar y seleccioná “Buscar”.",
+      "En los resultados podrás ver los profesionales disponibles y sus horarios de atención.",
+      "Luego, seleccioná “Ver disponibilidad y gestionar turnos”.",
+    ],
+    image: {
+      src: "/images/turno-2.png",
+      alt: "Captura de pantalla del paso 2 para solicitar un turno",
+    },
   },
   {
-    id: "profesional-horario",
+    id: "horario",
     number: 4,
-    title: "Seleccioná profesional y el horario",
-    description:
-      "Elegí el profesional que querés consultar y seleccioná entre los días y horarios disponibles para tu turno.",
-  },
-  {
-    id: "confirmar-datos",
-    number: 5,
-    title: "Confirmá tus datos",
-    description:
-      "Revisá y completá los datos solicitados por el sistema antes de confirmar la reserva de tu turno.",
+    title: "Elegí el día y horario",
+    description: [
+      "Seleccioná el día y horario que prefieras para tu consulta.",
+      "Luego, verificá tus datos personales y seleccioná tu obra social. Completá obligatoriamente tu número de teléfono y correo electrónico.",
+      "Finalmente, seleccioná “Confirmar”.",
+    ],
+    image: {
+      src: "/images/turno-3.png",
+      alt: "Captura de pantalla del paso 3 para solicitar un turno",
+    },
   },
   {
     id: "confirmacion",
-    number: 6,
-    title: "Recibí la confirmación de tu turno",
-    description:
-      "Una vez completado el proceso, recibirás la confirmación con los datos correspondientes a tu turno médico.",
+    number: 5,
+    title: "¡Turno confirmado!",
+    description: [
+      "Una vez procesado correctamente, verás en pantalla la confirmación de tu turno junto con el código de turno.",
+    ],
+    image: {
+      src: "/images/turno-4.png",
+      alt: "Captura de pantalla del paso 4 con la confirmación del turno",
+    },
   },
 ];
